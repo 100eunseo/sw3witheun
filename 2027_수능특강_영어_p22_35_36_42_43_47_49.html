@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2027 수능특강 영어 | Witheun by.은서쌤</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+:root {
+  --g900:#111827; --g800:#1F2937; --g700:#374151; --g600:#4B5563;
+  --g500:#6B7280; --g400:#9CA3AF; --g300:#D1D5DB; --g200:#E5E7EB;
+  --g100:#F3F4F6; --g50:#F9FAFB; --w:#FFFFFF;
+  --blue:#3182F6;  --blue-bg:#EFF6FF;  --blue-mid:#DBEAFE;
+  --green:#16A34A; --green-bg:#F0FDF4; --green-mid:#DCFCE7;
+  --red:#DC2626;   --red-bg:#FEF2F2;   --red-mid:#FEE2E2;
+  --orange:#EA580C;--orange-bg:#FFF7ED;
+  --purple:#7C3AED;--purple-bg:#F5F3FF;
+  --yellow:#CA8A04;--yellow-bg:#FEFCE8;--yellow-mid:#FEF9C3;
+  --teal:#0891B2;  --teal-bg:#ECFEFF;
+  --radius-sm:6px; --radius-md:10px; --radius-lg:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  font-size:15px;letter-spacing:-0.4px;line-height:1.75;
+  background:#ffffff;color:var(--g900);-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px 96px;}
+.top-header{padding:48px 0 28px;border-bottom:1px solid var(--g200);margin-bottom:0;}
+.top-header h1{font-size:26px;font-weight:800;letter-spacing:-0.8px;color:var(--g900);line-height:1.3;margin-bottom:6px;}
+.top-header .sub{font-size:14px;color:var(--g500);font-weight:500;letter-spacing:-0.2px;}
+.pill-nav{display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;z-index:100;background:#fff;padding:14px 0 12px;border-bottom:1px solid var(--g200);margin-bottom:32px;}
+.pill{height:32px;padding:0 14px;border-radius:100px;font-size:13px;font-weight:600;letter-spacing:-0.2px;border:1.5px solid var(--g200);background:#fff;color:var(--g500);cursor:pointer;transition:all .18s ease;display:inline-flex;align-items:center;}
+.pill:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-bg);}
+.pill.active{background:var(--g900);color:#fff;border-color:var(--g900);}
+.q-panel{display:none;animation:fadeUp .25s ease;}
+.q-panel.active{display:block;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.q-card{background:#fff;border:1px solid var(--g200);border-radius:var(--radius-lg);padding:28px 24px;margin-bottom:16px;}
+.q-title{display:flex;align-items:center;gap:10px;padding-bottom:16px;border-bottom:1px solid var(--g100);margin-bottom:20px;}
+.q-num{font-size:12px;font-weight:700;letter-spacing:.5px;background:var(--g900);color:#fff;padding:3px 10px;border-radius:100px;flex-shrink:0;}
+.q-type{font-size:13px;font-weight:600;color:var(--g700);line-height:1.4;letter-spacing:-0.2px;}
+.q-type-tag{font-size:11px;font-weight:700;letter-spacing:.2px;padding:3px 8px;border-radius:100px;margin-left:auto;flex-shrink:0;text-transform:uppercase;}
+.q-type-tag.claim  {background:var(--blue-mid);color:var(--blue);}
+.q-type-tag.meaning{background:var(--purple-bg);color:var(--purple);}
+.q-type-tag.gist   {background:var(--orange-bg);color:var(--orange);}
+.q-type-tag.title  {background:var(--green-mid);color:var(--green);}
+.q-type-tag.vocab  {background:var(--red-mid);color:var(--red);}
+.q-type-tag.blank  {background:var(--teal-bg);color:var(--teal);}
+.q-type-tag.topic  {background:var(--orange-bg);color:var(--orange);}
+.sent{padding:14px 16px;margin-bottom:10px;border-left:2px solid var(--g200);background:#fff;border-radius:0 var(--radius-sm) var(--radius-sm) 0;transition:border-color .15s;}
+.sent:hover{border-left-color:var(--g400);}
+.sent.key-sent{border-left:2px solid var(--yellow);background:var(--yellow-bg);border-radius:0 var(--radius-sm) var(--radius-sm) 0;}
+.sent.wrong-sent{border-left:2px solid var(--red);background:var(--red-bg);}
+.sent-num{font-size:11px;font-weight:700;letter-spacing:.3px;color:var(--g400);text-transform:uppercase;margin-bottom:6px;}
+.eng-line{font-size:15px;font-weight:500;color:var(--g900);line-height:1.85;margin-bottom:12px;word-break:keep-all;}
+.eng-line u{text-decoration-color:var(--red);text-underline-offset:3px;text-decoration-thickness:1.5px;}
+.parse-box{background:var(--g50);border:1px solid var(--g100);border-radius:var(--radius-md);padding:10px 14px;margin-bottom:10px;}
+.phrase{display:flex;align-items:baseline;gap:7px;padding:3px 0;font-size:13px;line-height:1.6;}
+.plabel{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.3px;padding:1px 7px;border-radius:100px;flex-shrink:0;min-width:30px;text-align:center;}
+.plabel.subj{background:var(--blue-mid);color:var(--blue);}
+.plabel.verb{background:var(--red-mid);color:var(--red);}
+.plabel.obj {background:var(--green-mid);color:var(--green);}
+.plabel.comp{background:var(--orange-bg);color:var(--orange);}
+.plabel.mod {background:var(--g100);color:var(--g500);}
+.plabel.conj{background:var(--purple-bg);color:var(--purple);}
+.peng{color:var(--g800);font-weight:500;}
+.pkor{color:var(--g500);font-size:12px;}
+.grammar-note{display:block;background:var(--blue-bg);border-radius:var(--radius-sm);padding:10px 14px;margin-bottom:10px;font-size:13px;color:var(--g700);line-height:1.85;}
+.grammar-note .gn-tag{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:.3px;padding:2px 8px;border-radius:100px;margin-bottom:6px;margin-right:4px;}
+.gn-tag{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:.3px;padding:2px 8px;border-radius:100px;flex-shrink:0;}
+.gn-tag.grammar  {background:var(--blue);color:#fff;}
+.gn-tag.blank    {background:var(--teal);color:#fff;}
+.gn-tag.vocab-tag{background:var(--green);color:#fff;}
+.vocab-badges{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;}
+.badge{font-size:11px;font-weight:600;letter-spacing:-0.1px;padding:3px 10px;border-radius:100px;}
+.badge.syn  {background:var(--green-bg);color:var(--green);}
+.badge.ant  {background:var(--red-bg);color:var(--red);}
+.badge.key  {background:var(--blue-bg);color:var(--blue);}
+.badge.wrong{background:var(--red-mid);color:var(--red);}
+.kor-line{font-size:13px;color:var(--g500);line-height:1.75;padding:6px 0 0 12px;border-left:2px solid var(--g200);}
+.choices{background:var(--g50);border:1px solid var(--g100);border-radius:var(--radius-md);padding:14px 18px;margin-bottom:14px;}
+.choice{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:13.5px;line-height:1.6;border-bottom:1px solid var(--g100);color:var(--g700);}
+.choice:last-child{border-bottom:none;}
+.choice .cnum{font-weight:700;color:var(--g400);min-width:16px;flex-shrink:0;}
+.choice.correct{color:var(--blue);font-weight:700;}
+.choice.correct .cnum{color:var(--blue);}
+.choice.wrong-ans{color:var(--red);}
+.choice.wrong-ans .cnum{color:var(--red);}
+.summary-box{background:#fff;border:1px solid var(--g200);border-top:2px solid var(--g900);border-radius:0 0 var(--radius-md) var(--radius-md);padding:18px 20px;margin-top:20px;}
+.sum-item{padding:10px 0;border-bottom:1px solid var(--g100);font-size:13px;line-height:1.75;}
+.sum-item:last-child{border-bottom:none;padding-bottom:0;}
+.sum-label{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:.3px;padding:2px 9px;border-radius:100px;margin-bottom:5px;text-transform:uppercase;}
+.sum-label.logic {background:var(--yellow-mid);color:var(--yellow);}
+.sum-label.answer{background:var(--blue-mid);color:var(--blue);}
+.sum-label.wrong {background:var(--red-mid);color:var(--red);}
+.sum-label.voca  {background:var(--green-mid);color:var(--green);}
+.sum-content{color:var(--g600);}
+.footer{text-align:center;padding:32px 0 24px;margin-top:48px;border-top:1px solid var(--g200);}
+.footer .brand{font-size:15px;font-weight:800;color:var(--g900);letter-spacing:-0.4px;margin-bottom:4px;}
+.footer .by{font-size:13px;color:var(--g400);font-weight:500;}
+@media(max-width:520px){
+  .wrap{padding:0 14px 72px;}
+  .q-card{padding:20px 16px;}
+  .top-header{padding:32px 0 20px;}
+  .top-header h1{font-size:21px;}
+  .eng-line{font-size:14.5px;}
+  .pill{height:30px;padding:0 12px;font-size:12px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top-header">
+    <h1>2027 수능특강 영어 구문 분석</h1>
+    <div class="sub">p.22 · 35 · 36 · 42 · 43 · 47 · 49 | Witheun by.은서쌤</div>
+  </div>
+
+  <div class="pill-nav" id="pillNav">
+    <span class="pill active" data-q="qp22">p.22</span>
+    <span class="pill" data-q="qp35">p.35</span>
+    <span class="pill" data-q="qp36">p.36</span>
+    <span class="pill" data-q="qp42">p.42</span>
+    <span class="pill" data-q="qp43">p.43</span>
+    <span class="pill" data-q="qp47">p.47</span>
+    <span class="pill" data-q="qp49">p.49</span>
+  </div>
+
+  <!-- ═══════════════ P22 ═══════════════ -->
+  <div class="q-panel active" id="qp22">
+  <div class="q-card">
+    <div class="q-title">
+      <span class="q-num">p.22</span>
+      <span class="q-type">밑줄 친 "cheated God"이 다음 글에서 의미하는 바로 가장 적절한 것은?</span>
+      <span class="q-type-tag meaning">함축의미</span>
+    </div>
+
+    <!-- S1 -->
+    <div class="sent">
+      <div class="sent-num">01</div>
+      <div class="eng-line">Even outdoors, although climate (including temperature) is usually regarded as beyond the control of man, localized temperature control is sometimes effective on a microclimate scale.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">Even outdoors</span><span class="pkor">야외에서조차</span></div>
+        <div class="phrase"><span class="plabel conj">양보</span><span class="peng">although climate (including temperature) is usually regarded as beyond the control of man</span><span class="pkor">기후(기온 포함)는 보통 인간의 통제를 벗어난 것으로 여겨지지만</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">localized temperature control</span><span class="pkor">국지적 기온 조절은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">is sometimes effective</span><span class="pkor">때로는 효과적이다</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">on a microclimate scale</span><span class="pkor">미기후 규모에서</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>be regarded as + 명사구</strong>: "~로 간주되다" 수동태. <em>beyond the control of man</em>은 "인간의 통제 너머에"라는 뜻의 전치사구로, <em>as</em> 뒤에 이어진다. 양보절 <strong>although</strong>로 역접 논리 구조를 설정: '기후는 통제 불가로 여겨지지만 → 국지적 기온 조절은 가능하다'는 주제 도입.<br>
+        📌 <strong>참고 — be regarded as:</strong> regard A as B = "A를 B로 간주하다". 수동형 be regarded as 뒤에는 명사/형용사/전치사구 모두 올 수 있다. <em>beyond the control of</em>는 숙어 표현으로 "~의 통제 범위 밖에"를 의미.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">be regarded as ~로 간주되다</span>
+        <span class="badge key">beyond the control of ~의 통제를 벗어난</span>
+        <span class="badge key">localized 국지적인</span>
+        <span class="badge key">microclimate 미기후</span>
+      </div>
+      <div class="kor-line">야외에서조차, 기후(기온 포함)는 보통 인간의 통제를 벗어난 것으로 여겨지지만, 국지적 기온 조절은 미기후 규모에서 때로는 효과적이다.</div>
+    </div>
+
+    <!-- S2 -->
+    <div class="sent">
+      <div class="sent-num">02</div>
+      <div class="eng-line">Vancouver, Canada, is a few miles north of the 49th parallel, about 60 miles farther north than Minot, North Dakota, with its legendary harsh winter temperatures.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">Vancouver, Canada</span><span class="pkor">캐나다 밴쿠버는</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">is</span><span class="pkor">~이다</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">a few miles north of the 49th parallel</span><span class="pkor">49번째 위도선의 북쪽으로 몇 마일 지점</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">about 60 miles farther north than Minot, North Dakota</span><span class="pkor">노스다코타주 마이낫보다 약 60마일 더 북쪽</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">with its legendary harsh winter temperatures</span><span class="pkor">(마이낫은) 전설적으로 혹독한 겨울 기온으로 유명한데</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>with + 명사구</strong> (부대상황): <em>with its legendary harsh winter temperatures</em>는 앞의 Minot를 수식하여 "혹독한 겨울 기온으로 유명한 마이낫"의 의미를 추가. 비교급 <strong>farther north than</strong>으로 북위 비교.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">parallel 위도선</span>
+        <span class="badge key">farther north than ~보다 더 북쪽인</span>
+        <span class="badge key">legendary 전설적인</span>
+      </div>
+      <div class="kor-line">캐나다 밴쿠버는 49번째 위도선의 북쪽으로 몇 마일 지점에 위치하며, 전설적으로 혹독한 겨울 기온으로 유명한 노스다코타주 마이낫보다 약 60마일 더 북쪽에 있다.</div>
+    </div>
+
+    <!-- S3 -->
+    <div class="sent">
+      <div class="sent-num">03</div>
+      <div class="eng-line">But constant foehn winds off the Pacific Ocean make Vancouver winters mild and wet, although sunshine is scant.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel conj">접속</span><span class="peng">But</span><span class="pkor">그러나</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">constant foehn winds off the Pacific Ocean</span><span class="pkor">태평양에서 불어오는 지속적인 푄 바람은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">make</span><span class="pkor">~하게 만들다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">Vancouver winters</span><span class="pkor">밴쿠버의 겨울을</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">mild and wet</span><span class="pkor">온화하고 습하게</span></div>
+        <div class="phrase"><span class="plabel conj">양보</span><span class="peng">although sunshine is scant</span><span class="pkor">햇볕은 부족하지만</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>SVOC 구문</strong>: make + O(Vancouver winters) + C(mild and wet). 목적어 보어 자리에 형용사 두 개가 and로 연결됨. <em>scant</em> = 부족한, 희소한 (수능 고빈도 어휘).
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">make O + adj O를 ~하게 만들다</span>
+        <span class="badge key">off the Pacific Ocean 태평양에서 불어오는</span>
+        <span class="badge key">scant 부족한, 희소한</span>
+        <span class="badge key">foehn 푄 바람(따뜻하고 건조한 하강풍)</span>
+      </div>
+      <div class="kor-line">그러나 태평양에서 불어오는 지속적인 푄 바람이 밴쿠버의 겨울을 온화하고 습하게 만들지만, 햇볕은 부족하다.</div>
+    </div>
+
+    <!-- S4 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">04 ★ 밑줄 핵심 문장</div>
+      <div class="eng-line">When I had a garden there in the late 1940s, a neighbor used to say that I <u>"cheated God"</u> to bring in my lettuce and tomatoes earlier than anyone else.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel conj">시간</span><span class="peng">When I had a garden there in the late 1940s</span><span class="pkor">1940년대 후반에 그곳에서 정원을 가꾸었을 때</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">a neighbor</span><span class="pkor">한 이웃이</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">used to say</span><span class="pkor">말하곤 했다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">that I "cheated God"</span><span class="pkor">내가 '신을 속였다'고</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">to bring in my lettuce and tomatoes earlier than anyone else</span><span class="pkor">다른 누구보다 먼저 상추와 토마토를 수확하기 위해</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>used to + V</strong>: 과거의 반복적 습관 ("~하곤 했다"). <strong>bring in</strong>: 수확하다(=harvest). to bring in은 목적을 나타내는 부정사구. <br>
+        💡 <strong>함축의미 핵심</strong>: "cheated God" = 자연(기후)의 한계를 인위적인 방법(남향 경사 두둑 + 돌 열저장)으로 극복함 → 정답 ⑤ <em>made a warmer microclimate using strategic gardening methods</em><br>
+        📌 <strong>참고 — used to vs. be used to:</strong> <em>used to V</em> = 과거 습관 (~하곤 했다) vs. <em>be used to V-ing</em> = ~에 익숙하다. 이 문장은 과거 습관.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">used to V 과거에 ~하곤 했다</span>
+        <span class="badge key">bring in 수확하다</span>
+        <span class="badge key">earlier than anyone else 누구보다 먼저</span>
+      </div>
+      <div class="kor-line">1940년대 후반에 그곳에서 정원을 가꾸던 시절, 한 이웃은 내가 누구보다 먼저 상추와 토마토를 수확하기 위해 '신을 속였다'고 말하곤 했다.</div>
+    </div>
+
+    <!-- S5 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">05 ★ 핵심 근거</div>
+      <div class="eng-line">The bed in which the vegetables grew was banked toward the south at approximately 50 degrees, and the area between the plants was covered with flat stones, gathered from the nearby beach, to maximize soil heating from the weak late winter-early spring sun.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S₁</span><span class="peng">The bed in which the vegetables grew</span><span class="pkor">채소들이 자라는 두둑은</span></div>
+        <div class="phrase"><span class="plabel verb">V₁</span><span class="peng">was banked</span><span class="pkor">경사 지어져 있었다</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">toward the south at approximately 50 degrees</span><span class="pkor">약 50도 기울기로 남쪽을 향해</span></div>
+        <div class="phrase"><span class="plabel conj">접속</span><span class="peng">and</span><span class="pkor">그리고</span></div>
+        <div class="phrase"><span class="plabel subj">S₂</span><span class="peng">the area between the plants</span><span class="pkor">식물들 사이의 공간은</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">was covered with</span><span class="pkor">~으로 덮여 있었다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">flat stones, gathered from the nearby beach</span><span class="pkor">인근 해변에서 모아온 납작한 돌들로</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">to maximize soil heating from the weak late winter-early spring sun</span><span class="pkor">늦겨울~초봄의 약한 햇빛으로 토양 가열을 극대화하기 위해</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>전치사 + 관계대명사</strong>: <em>The bed in which the vegetables grew</em> = The bed that the vegetables grew in. <strong>be covered with</strong>: ~으로 덮이다. <strong>gathered from</strong>: 과거분사 후치 수식 (= which were gathered from). <strong>to maximize</strong>: 목적의 부정사.<br>
+        💡 <strong>분사구문 풀어쓰기</strong>: <em>gathered from the nearby beach</em> = <em>which were gathered from the nearby beach</em> (인근 해변에서 모아진).<br>
+        📌 <strong>(참고) 전치사+관계대명사 완전 정리</strong><br>
+        <em>The bed in which the vegetables grew</em> = <em>The bed where the vegetables grew</em> = <em>The bed that/which the vegetables grew in</em><br>
+        <strong>원리</strong>: 관계절 안의 전치사를 관계대명사 앞으로 이동시킨 형태.<br>
+        <strong>예시</strong>: the house → They lived in the house → the house <em>in which</em> they lived (= the house <em>where</em> they lived)<br>
+        <strong>중요 규칙</strong>:<br>
+        ① <em>전치사 + which</em>: 사물 선행사에 사용. <em>전치사 + whom</em>: 사람 선행사.<br>
+        ② <em>전치사 + that</em>: 불가 (X). → <em>in that</em> (X), <em>in which</em> (O).<br>
+        ③ 관계대명사를 생략할 때는 전치사를 문장 끝에 남겨야 함: the bed that they grew vegetables <em>in</em>.<br>
+        <strong>자주 나오는 패턴</strong>: in which(where), at which(when/where), by which(방법), for which(이유=why), with which(함께).
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">in which = where 관계부사 대체 가능</span>
+        <span class="badge key">be banked toward ~방향으로 경사지어지다</span>
+        <span class="badge key">be covered with ~으로 덮이다</span>
+        <span class="badge key">to maximize 극대화하기 위해</span>
+        <span class="badge key">soil heating 토양 가열</span>
+      </div>
+      <div class="kor-line">채소들이 자라는 두둑은 약 50도 기울기로 남쪽을 향해 경사 지어져 있었고, 식물들 사이 공간은 인근 해변에서 모아온 납작한 돌들로 덮여 있었는데, 이는 늦겨울~초봄의 약한 햇빛으로 토양 가열을 최대화하기 위해서였다.</div>
+    </div>
+
+    <!-- 선택지 -->
+    <div class="choices">
+      <div class="choice"><span class="cnum">①</span> prayed to get more vegetables than anyone else</div>
+      <div class="choice"><span class="cnum">②</span> produced many more crops in spite of strong winds</div>
+      <div class="choice"><span class="cnum">③</span> confronted the severe climate with the latest technology</div>
+      <div class="choice"><span class="cnum">④</span> helped others to overcome the harsh weather conditions</div>
+      <div class="choice correct"><span class="cnum">⑤ ✓</span> made a warmer microclimate using strategic gardening methods</div>
+    </div>
+
+    <div class="summary-box">
+      <div class="sum-item">
+        <div class="sum-label logic">핵심 논리</div>
+        <div class="sum-content">기후는 통제 불가로 여겨지지만, 필자는 두둑의 남향 경사(50°)와 해변 납작돌(열 저장)을 이용해 인위적으로 미기후를 따뜻하게 만들어 수확을 앞당겼다 → 이웃이 이를 "신을 속였다"고 표현.</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label answer">정답 · 근거</div>
+        <div class="sum-content"><strong>⑤</strong> — "cheated God" = 자연적 한계(기후)를 전략적 원예 방법(남향 경사 + 돌 열저장)으로 극복 → <em>made a warmer microclimate using strategic gardening methods</em></div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label wrong">오답 분석</div>
+        <div class="sum-content">① 기도(pray) 언급 없음 ② 강풍 극복이 아닌 미기후 조성 ③ 최신 기술(latest technology) 사용 아님 ④ 타인을 도운 것이 아님</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label voca">핵심 어휘</div>
+        <div class="sum-content">microclimate 미기후 · localized 국지적인 · foehn 푄 바람 · scant 부족한 · be banked toward ~방향으로 경사지다 · maximize 극대화하다</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ═══════════════ P35 ═══════════════ -->
+  <div class="q-panel" id="qp35">
+  <div class="q-card">
+    <div class="q-title">
+      <span class="q-num">p.35</span>
+      <span class="q-type">다음 글에서 필자가 주장하는 바로 가장 적절한 것은?</span>
+      <span class="q-type-tag claim">주장</span>
+    </div>
+
+    <!-- S1 -->
+    <div class="sent">
+      <div class="sent-num">01</div>
+      <div class="eng-line">Consumer surveys indicate that the majority of Americans (91%) believe they have some control over their health, and 72% believe that food and nutrition play the greatest role.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">Consumer surveys</span><span class="pkor">소비자 조사는</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">indicate</span><span class="pkor">나타낸다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">that the majority of Americans (91%) believe they have some control over their health</span><span class="pkor">미국인의 대다수(91%)가 자신의 건강에 어느 정도 통제력이 있다고 믿는다는 것을</span></div>
+        <div class="phrase"><span class="plabel conj">접속</span><span class="peng">and</span><span class="pkor">그리고</span></div>
+        <div class="phrase"><span class="plabel subj">S₂</span><span class="peng">72%</span><span class="pkor">72%는</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">believe</span><span class="pkor">믿는다</span></div>
+        <div class="phrase"><span class="plabel obj">O₂</span><span class="peng">that food and nutrition play the greatest role</span><span class="pkor">식품과 영양이 가장 큰 역할을 한다고</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>indicate that절</strong>: 동사 indicate의 목적어로 that절이 이어짐. <strong>the majority of + 복수명사</strong> → 복수 동사 believe. <em>play the greatest role</em>: 가장 큰 역할을 하다 (수능 빈출 표현).
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">the majority of ~의 대다수</span>
+        <span class="badge key">have control over ~에 대한 통제력을 가지다</span>
+        <span class="badge key">play the greatest role 가장 큰 역할을 하다</span>
+      </div>
+      <div class="kor-line">소비자 조사에 따르면 미국인의 대다수(91%)가 자신의 건강에 어느 정도 통제력이 있다고 믿으며, 72%는 식품과 영양이 가장 큰 역할을 한다고 믿는다.</div>
+    </div>
+
+    <!-- S2 -->
+    <div class="sent">
+      <div class="sent-num">02</div>
+      <div class="eng-line">However, 75% of consumers rely on media outlets including the Internet as their major sources of health and nutrition information, and only half use medical sources.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel conj">역접</span><span class="peng">However</span><span class="pkor">그러나</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">75% of consumers</span><span class="pkor">소비자의 75%는</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">rely on</span><span class="pkor">~에 의존한다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">media outlets including the Internet</span><span class="pkor">인터넷을 포함한 매스컴에</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">as their major sources of health and nutrition information</span><span class="pkor">건강 및 영양 정보의 주요 출처로서</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>rely on A as B</strong>: A를 B로서 의존하다. <em>media outlet</em> = 매스컴, 언론 매체.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">rely on A as B A를 B로 의존하다</span>
+        <span class="badge key">media outlet 언론/매스컴 매체</span>
+      </div>
+      <div class="kor-line">그러나 소비자의 75%는 인터넷을 포함한 매스컴을 건강 및 영양 정보의 주요 출처로 활용하며, 의학 전문 자료를 사용하는 비율은 절반에 불과하다.</div>
+    </div>
+
+    <!-- S3 -->
+    <div class="sent">
+      <div class="sent-num">03</div>
+      <div class="eng-line">A Google search for "nutrition listservs" yielded over 100,000 sites, but it is likely that many of these writings are not reviewed by nutrition experts.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">A Google search for "nutrition listservs"</span><span class="pkor">"영양 리스트서브"에 대한 구글 검색은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">yielded</span><span class="pkor">산출했다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">over 100,000 sites</span><span class="pkor">10만 개가 넘는 사이트를</span></div>
+        <div class="phrase"><span class="plabel conj">역접</span><span class="peng">but</span><span class="pkor">그러나</span></div>
+        <div class="phrase"><span class="plabel subj">S₂</span><span class="peng">it (가주어)</span><span class="pkor">~하다는 것이</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">is likely</span><span class="pkor">가능성이 높다</span></div>
+        <div class="phrase"><span class="plabel obj">진주어</span><span class="peng">that many of these writings are not reviewed by nutrition experts</span><span class="pkor">이러한 글들 중 상당수가 영양 전문가의 검토를 받지 않는다는 것이</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>It is likely that...</strong>: 가주어-진주어 구문. <em>it</em>은 형식 주어, <em>that</em>절이 진짜 주어. <strong>be reviewed by</strong>: 수동태 (~에 의해 검토되다).<br>
+        📌 <strong>(참고) 가주어 it 완전 정리</strong><br>
+        <strong>구조</strong>: It (가주어) + be동사 + 형용사/과거분사 + that절/to부정사 (진주어).<br>
+        <strong>자주 쓰이는 형용사</strong>: likely, possible, probable, true, important, clear, obvious, certain, necessary, surprising, unfortunate 등.<br>
+        <strong>비교 — it의 3가지 용법</strong>:<br>
+        ① <strong>가주어 it</strong>: It is likely <u>that</u>... → that절을 앞으로 당기면 "That many writings are not reviewed is likely" (어색함 → 가주어 it 사용이 자연스러움).<br>
+        ② <strong>지시 대명사 it</strong>: 앞 명사를 받음. "The book was great. <u>It</u> inspired me."<br>
+        ③ <strong>비인칭 it</strong>: 날씨·시간·거리 등. "It is raining / It is 5 o'clock."<br>
+        <strong>판별 팁</strong>: that절이 뒤에 오면 가주어 it. that절을 주어 자리로 이동시켜 자연스러우면 가주어 구조 확인.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">it is likely that ~일 가능성이 높다</span>
+        <span class="badge key">be reviewed by ~에 의해 검토되다</span>
+        <span class="badge key">yield (결과를) 산출하다</span>
+        <span class="badge key">listserv 리스트서브(자동 이메일 전송 시스템)</span>
+      </div>
+      <div class="kor-line">"영양 리스트서브"에 대한 구글 검색은 10만 개가 넘는 사이트를 산출하지만, 이러한 글들 중 상당수가 영양 전문가의 검토를 받지 않을 가능성이 높다.</div>
+    </div>
+
+    <!-- S4 -->
+    <div class="sent">
+      <div class="sent-num">04</div>
+      <div class="eng-line">Internet sites marketing herbs, drugs, and health devices are not monitored by government regulatory agencies and often contain misleading information.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">Internet sites marketing herbs, drugs, and health devices</span><span class="pkor">약초, 의약품, 건강 기기를 판매하는 인터넷 사이트들은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">are not monitored by</span><span class="pkor">~에 의해 모니터링되지 않는다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">government regulatory agencies</span><span class="pkor">정부 규제 기관의</span></div>
+        <div class="phrase"><span class="plabel conj">접속</span><span class="peng">and</span><span class="pkor">그리고</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">often contain</span><span class="pkor">종종 포함한다</span></div>
+        <div class="phrase"><span class="plabel obj">O₂</span><span class="peng">misleading information</span><span class="pkor">오해를 일으키는 정보를</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>marketing herbs...</strong>: 현재분사 후치 수식 — Internet sites (which are) marketing herbs....<br>
+        💡 <strong>분사구문 풀어쓰기</strong>: <em>marketing herbs, drugs, and health devices</em> = <em>which market herbs, drugs, and health devices</em> (약초·의약품·건강 기기를 판매하는).
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">be monitored by ~에 의해 모니터링되다</span>
+        <span class="badge key">regulatory agency 규제 기관</span>
+        <span class="badge key">misleading 오해를 불러일으키는</span>
+      </div>
+      <div class="kor-line">약초, 의약품, 건강 기기를 판매하는 인터넷 사이트들은 정부 규제 기관의 모니터링을 받지 않으며, 종종 오해를 불러일으키는 정보를 담고 있다.</div>
+    </div>
+
+    <!-- S5 -->
+    <div class="sent">
+      <div class="sent-num">05</div>
+      <div class="eng-line">Reputable food companies provide helpful facts about the nutrient content of their products, but commercial sites devoted to sales often post misleading health claims.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S₁</span><span class="peng">Reputable food companies</span><span class="pkor">신뢰할 수 있는 식품 회사들은</span></div>
+        <div class="phrase"><span class="plabel verb">V₁</span><span class="peng">provide</span><span class="pkor">제공한다</span></div>
+        <div class="phrase"><span class="plabel obj">O₁</span><span class="peng">helpful facts about the nutrient content of their products</span><span class="pkor">제품의 영양 성분에 관한 유용한 정보를</span></div>
+        <div class="phrase"><span class="plabel conj">역접</span><span class="peng">but</span><span class="pkor">그러나</span></div>
+        <div class="phrase"><span class="plabel subj">S₂</span><span class="peng">commercial sites devoted to sales</span><span class="pkor">판매를 목적으로 하는 상업 사이트들은</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">often post</span><span class="pkor">종종 게시한다</span></div>
+        <div class="phrase"><span class="plabel obj">O₂</span><span class="peng">misleading health claims</span><span class="pkor">오해를 일으키는 건강 주장들을</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>devoted to sales</strong>: 과거분사 후치 수식 (= which are devoted to sales). <em>be devoted to</em> = ~에 헌신하다/전념하다.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">reputable 평판 좋은, 신뢰할 수 있는</span>
+        <span class="badge key">nutrient content 영양 성분</span>
+        <span class="badge key">be devoted to ~에 전념하는</span>
+        <span class="badge key">health claims 건강 주장</span>
+      </div>
+      <div class="kor-line">신뢰할 수 있는 식품 회사들은 제품의 영양 성분에 관한 유용한 정보를 제공하지만, 판매를 목적으로 하는 상업 사이트들은 종종 오해를 불러일으키는 건강 주장을 게시한다.</div>
+    </div>
+
+    <!-- S6 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">06 ★ 주제문(필자 주장)</div>
+      <div class="eng-line">Internet sites maintained by government agencies, universities, state extension services, and medical facilities provide evidence-based information and should be the first source for public information on foods, nutrition, and health.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">Internet sites maintained by government agencies, universities, state extension services, and medical facilities</span><span class="pkor">정부 기관, 대학교, 주 보급 서비스, 의료 시설이 운영하는 인터넷 사이트들은</span></div>
+        <div class="phrase"><span class="plabel verb">V₁</span><span class="peng">provide</span><span class="pkor">제공한다</span></div>
+        <div class="phrase"><span class="plabel obj">O₁</span><span class="peng">evidence-based information</span><span class="pkor">증거 기반 정보를</span></div>
+        <div class="phrase"><span class="plabel conj">접속</span><span class="peng">and</span><span class="pkor">그리고</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">should be</span><span class="pkor">~이어야 한다</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">the first source for public information on foods, nutrition, and health</span><span class="pkor">식품, 영양, 건강에 관한 공공 정보의 첫 번째 출처</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>maintained by</strong>: 과거분사 후치 수식 (= which are maintained by). <strong>should be the first source</strong>: 조동사 should로 필자의 주장/당위성을 표현. <strong>evidence-based</strong>: 증거에 기반한 (복합 형용사).
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">evidence-based 증거에 기반한</span>
+        <span class="badge key">maintained by ~에 의해 관리/운영되는</span>
+        <span class="badge key">state extension service 주(州) 보급 서비스</span>
+        <span class="badge key">should be ~이어야 한다(당위)</span>
+      </div>
+      <div class="kor-line">정부 기관, 대학교, 주 보급 서비스, 의료 시설이 운영하는 인터넷 사이트들은 증거에 기반한 정보를 제공하므로, 식품·영양·건강에 관한 공공 정보의 첫 번째 출처가 되어야 한다.</div>
+    </div>
+
+    <div class="choices">
+      <div class="choice"><span class="cnum">①</span> 정부는 인터넷 건강 정보 사이트에 대한 규제를 강화해야 한다.</div>
+      <div class="choice correct"><span class="cnum">② ✓</span> 건강과 영양에 관해서는 증거에 기반한 정보가 우선시되어야 한다.</div>
+      <div class="choice"><span class="cnum">③</span> 대학은 영양 전문가 양성을 위한 다양한 프로그램을 마련해야 한다.</div>
+      <div class="choice"><span class="cnum">④</span> 건강은 식품과 영양뿐 아니라 규칙적인 운동으로 꾸준히 관리해야 한다.</div>
+      <div class="choice"><span class="cnum">⑤</span> 식품 회사는 제품의 안전성과 생산 과정에 관한 정보를 정직하게 제공해야 한다.</div>
+    </div>
+
+    <div class="summary-box">
+      <div class="sum-item">
+        <div class="sum-label logic">핵심 논리</div>
+        <div class="sum-content">소비자들이 건강/영양 정보를 신뢰할 수 없는 인터넷에 과도하게 의존 → 상업적/미검증 사이트의 문제점 → 결론: 정부/대학/의료 기관이 운영하는 증거 기반 사이트를 우선 이용해야 한다.</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label answer">정답 · 근거</div>
+        <div class="sum-content"><strong>②</strong> — 마지막 문장 "should be the first source"에서 증거 기반(evidence-based) 정보를 우선해야 한다는 필자의 주장이 명확하게 드러남.</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label wrong">오답 분석</div>
+        <div class="sum-content">① 규제 강화는 언급되지 않음 ③ 대학 프로그램 마련은 본문 내용 아님 ④ 운동 관리는 전혀 언급 없음 ⑤ 식품 회사 생산 과정 정보 제공은 본문 초점이 아님</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label voca">핵심 어휘</div>
+        <div class="sum-content">evidence-based 증거 기반 · misleading 오해를 일으키는 · reputable 신뢰할 만한 · regulatory agency 규제 기관 · nutrient content 영양 성분</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ═══════════════ P36 ═══════════════ -->
+  <div class="q-panel" id="qp36">
+  <div class="q-card">
+    <div class="q-title">
+      <span class="q-num">p.36</span>
+      <span class="q-type">다음 글에서 필자가 주장하는 바로 가장 적절한 것은?</span>
+      <span class="q-type-tag claim">주장</span>
+    </div>
+
+    <!-- S1 -->
+    <div class="sent key-sent">
+      <div class="sent-num">01 ★ 주제문</div>
+      <div class="eng-line">My business partner Charles and I embraced the servant leader's way of doing things.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">My business partner Charles and I</span><span class="pkor">내 사업 파트너 찰스와 나는</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">embraced</span><span class="pkor">받아들였다/실천했다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">the servant leader's way of doing things</span><span class="pkor">서번트 리더의 일하는 방식을</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>servant leader</strong>: 구성원을 섬기며 이끄는 리더십 유형. <em>embrace</em> = (태도/방식 등을) 받아들이다, 실천하다. <em>way of doing things</em> = 일하는 방식 (관용표현).
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">embrace (사상/방식을) 받아들이다</span>
+        <span class="badge key">servant leader 서번트 리더</span>
+        <span class="badge key">way of doing things 일하는 방식</span>
+      </div>
+      <div class="kor-line">내 사업 파트너 찰스와 나는 서번트 리더의 일하는 방식을 실천했다.</div>
+    </div>
+
+    <!-- S2 -->
+    <div class="sent">
+      <div class="sent-num">02</div>
+      <div class="eng-line">In other words, nothing was beneath us.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">In other words</span><span class="pkor">다시 말해</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">nothing</span><span class="pkor">어떤 일도</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">was beneath us</span><span class="pkor">우리 격에 떨어지지 않았다</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>be beneath someone</strong>: (어떤 일이) 누군가의 체면을 깎다, 품위에 맞지 않다. <em>nothing was beneath us</em> = 우리가 못 할 일은 없었다, 어떤 일도 우리 수준 이하라고 여기지 않았다.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">nothing is beneath us 못 할 일이 없다, 체면 따지지 않는다</span>
+        <span class="badge key">in other words 다시 말해</span>
+      </div>
+      <div class="kor-line">다시 말해, 우리에게 체면에 맞지 않는 일이란 없었다.</div>
+    </div>
+
+    <!-- S3 -->
+    <div class="sent">
+      <div class="sent-num">03</div>
+      <div class="eng-line">We led by example and did the work.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">We</span><span class="pkor">우리는</span></div>
+        <div class="phrase"><span class="plabel verb">V₁</span><span class="peng">led by example</span><span class="pkor">솔선수범했다</span></div>
+        <div class="phrase"><span class="plabel conj">접속</span><span class="peng">and</span><span class="pkor">그리고</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">did the work</span><span class="pkor">직접 일을 했다</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>lead by example</strong>: 솔선수범하다 (수능 빈출 관용표현). 리더십 관련 지문에서 자주 등장.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">lead by example 솔선수범하다</span>
+      </div>
+      <div class="kor-line">우리는 솔선수범했고 직접 일했다.</div>
+    </div>
+
+    <!-- S4 -->
+    <div class="sent">
+      <div class="sent-num">04</div>
+      <div class="eng-line">When any new salesman came into the store, he would look around, notice Charles polishing some corner of the floor and me covered in flour, and assume the decision-maker was not present.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel conj">시간</span><span class="peng">When any new salesman came into the store</span><span class="pkor">어떤 신입 영업사원이 가게에 들어올 때마다</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">he</span><span class="pkor">그는</span></div>
+        <div class="phrase"><span class="plabel verb">V₁</span><span class="peng">would look around</span><span class="pkor">주변을 둘러보고</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">notice</span><span class="pkor">알아차리고</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">Charles polishing some corner of the floor and me covered in flour</span><span class="pkor">찰스가 바닥 한 구석을 닦고 내가 밀가루를 뒤집어쓴 것을</span></div>
+        <div class="phrase"><span class="plabel verb">V₃</span><span class="peng">assume</span><span class="pkor">추측했다</span></div>
+        <div class="phrase"><span class="plabel obj">O₃</span><span class="peng">the decision-maker was not present</span><span class="pkor">의사결정권자가 없다고</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>지각동사 notice + O + 현재분사/과거분사</strong>: notice Charles polishing(찰스가 닦는 것을), notice me covered(내가 덮인 것을). <strong>would V</strong>: 과거의 반복 습관 (~하곤 했다). <strong>assume + that절</strong>: ~라고 추측하다.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">notice O + V-ing O가 ~하는 것을 알아차리다</span>
+        <span class="badge key">would V 과거 반복 습관</span>
+        <span class="badge key">decision-maker 의사결정권자</span>
+        <span class="badge key">covered in flour 밀가루를 뒤집어쓴</span>
+      </div>
+      <div class="kor-line">어떤 신입 영업사원이 가게에 들어올 때마다, 그는 주변을 둘러보고 찰스가 바닥 한 구석을 닦고 내가 밀가루를 뒤집어쓴 것을 알아차린 뒤, 의사결정권자가 자리에 없다고 생각하곤 했다.</div>
+    </div>
+
+    <!-- S5 -->
+    <div class="sent">
+      <div class="sent-num">05</div>
+      <div class="eng-line">He'd then hand off whatever he was selling to me and say, "Can you give this to the owner?"</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">He</span><span class="pkor">그는</span></div>
+        <div class="phrase"><span class="plabel verb">V₁</span><span class="peng">would hand off</span><span class="pkor">건네주곤 했다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">whatever he was selling</span><span class="pkor">자신이 팔고 있던 것 무엇이든</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">to me</span><span class="pkor">나에게</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">say</span><span class="pkor">말하다</span></div>
+        <div class="phrase"><span class="plabel obj">O₂</span><span class="peng">"Can you give this to the owner?"</span><span class="pkor">"주인에게 이것을 전달해 주실 수 있나요?"</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>whatever he was selling</strong>: 복합관계대명사 whatever = anything that (그가 팔고 있는 것 무엇이든). <strong>hand off</strong>: ~를 건네다, 넘기다.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">hand off 건네다, 넘기다</span>
+        <span class="badge key">whatever = anything that ~하는 것 무엇이든</span>
+      </div>
+      <div class="kor-line">그는 자신이 팔고 있던 것을 나에게 건네며 "주인에게 이것을 전달해 주실 수 있나요?"라고 말하곤 했다.</div>
+    </div>
+
+    <!-- S6 -->
+    <div class="sent">
+      <div class="sent-num">06</div>
+      <div class="eng-line">Now, if Charles and I had remained in the bakery for too long, we wouldn't have been able to grow and scale, so I'm not saying you should be sweeping the floors forever.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel conj">조건</span><span class="peng">if Charles and I had remained in the bakery for too long</span><span class="pkor">만약 찰스와 내가 너무 오래 빵집에 머물러 있었다면</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">we</span><span class="pkor">우리는</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">wouldn't have been able to grow and scale</span><span class="pkor">성장하고 규모를 키우지 못했을 것이다</span></div>
+        <div class="phrase"><span class="plabel conj">인과</span><span class="peng">so</span><span class="pkor">그러므로</span></div>
+        <div class="phrase"><span class="plabel subj">S₂</span><span class="peng">I</span><span class="pkor">나는</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">am not saying</span><span class="pkor">말하는 것이 아니다</span></div>
+        <div class="phrase"><span class="plabel obj">O₂</span><span class="peng">you should be sweeping the floors forever</span><span class="pkor">당신이 영원히 바닥을 쓸고 있어야 한다고</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>가정법 과거완료</strong>: if + had p.p. → would have p.p. — 과거 사실과 반대되는 상황. "남아 있었다면 → 성장하지 못했을 것".<br>
+        📌 <strong>(참고) 가정법 과거완료 완전 정리</strong><br>
+        <strong>구조</strong>: If + S + <em>had p.p.</em>, S + <em>would/could/might have p.p.</em><br>
+        <strong>의미</strong>: 과거 사실과 반대되는 가정. "만약 ~했었다면, ~했을 텐데" (실제로는 그렇지 않았음).<br>
+        <strong>이 문장 해석</strong>: "if Charles and I had remained (X — 실제로는 오래 머물지 않음) → we wouldn't have been able to grow (실제로는 성장함)".<br>
+        <strong>비교 — 가정법 3종류</strong>:<br>
+        ① <strong>가정법 과거</strong>: If S <em>were/V-ed</em>, S <em>would V</em> → 현재 사실과 반대.<br>
+        ② <strong>가정법 과거완료</strong>: If S <em>had p.p.</em>, S <em>would have p.p.</em> → 과거 사실과 반대.<br>
+        ③ <strong>혼합가정법</strong>: If S <em>had p.p.</em>, S <em>would V</em> → 과거 조건 + 현재 결과.<br>
+        <strong>수능 출제 포인트</strong>: if절 동사 형태(had p.p.인지 were/V-ed인지)와 주절 동사 형태(would have p.p.인지 would V인지)의 일치 여부.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">가정법 과거완료 if had p.p. → would have p.p.</span>
+        <span class="badge key">grow and scale 성장하고 규모를 키우다</span>
+      </div>
+      <div class="kor-line">만약 찰스와 내가 빵집에 너무 오래 머물러 있었다면 성장하고 규모를 키우지 못했을 것이다. 그러므로 나는 당신이 영원히 바닥을 쓸어야 한다고 말하는 것이 아니다.</div>
+    </div>
+
+    <!-- S7 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">07 ★ 핵심 주장</div>
+      <div class="eng-line">It's more about modeling what's important.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">It</span><span class="pkor">그것은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">is more about</span><span class="pkor">~에 더 가깝다</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">modeling what's important</span><span class="pkor">중요한 것을 몸소 보여주는 것</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>be more about V-ing</strong>: ~에 더 관한 것이다. <strong>what's important</strong>: 간접의문문 = 중요한 것 (what = the thing that). <strong>modeling</strong>: 여기서는 "본보기를 보여주다".
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">be more about ~에 더 관한 것이다</span>
+        <span class="badge key">modeling 본보기 보이기</span>
+      </div>
+      <div class="kor-line">그것은 무엇이 중요한지 몸소 보여주는 것에 더 가깝다.</div>
+    </div>
+
+    <!-- S8 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">08 ★ 결론</div>
+      <div class="eng-line">If cleanliness and details are important, be sure you aren't above doing the work and pitching in.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel conj">조건</span><span class="peng">If cleanliness and details are important</span><span class="pkor">청결과 세부 사항이 중요하다면</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">be sure</span><span class="pkor">반드시 ~하라</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">you aren't above doing the work and pitching in</span><span class="pkor">당신이 그 일을 하고 협력하는 것을 꺼리지 않음을</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>be above V-ing</strong>: ~을 자신의 격에 맞지 않다고 여기다, ~을 하기 싫어하다. <em>not above doing</em> = 하기를 꺼리지 않다. <strong>pitch in</strong>: 협력하다, 힘을 보태다.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">be above V-ing ~을 자신의 격에 맞지 않다고 여기다</span>
+        <span class="badge key">pitch in 협력하다, 힘을 보태다</span>
+        <span class="badge key">be sure (that) 반드시 ~하도록 하다</span>
+      </div>
+      <div class="kor-line">청결과 세부 사항이 중요하다면, 그 일을 직접 하고 협력하는 것을 꺼리지 않도록 하라.</div>
+    </div>
+
+    <!-- S9 -->
+    <div class="sent">
+      <div class="sent-num">09</div>
+      <div class="eng-line">Come into your workspace and ask how you can help.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel verb">V₁</span><span class="peng">Come into your workspace</span><span class="pkor">작업 공간으로 들어가서</span></div>
+        <div class="phrase"><span class="plabel conj">접속</span><span class="peng">and</span><span class="pkor">그리고</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">ask</span><span class="pkor">물어보라</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">how you can help</span><span class="pkor">당신이 어떻게 도울 수 있는지를</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>간접의문문</strong>: ask + how you can help (ask + 의문사 + S + V 어순). 직접의문문 "How can you help?"가 목적절로 들어가면 어순이 바뀜.<br>
+        📌 <strong>(참고) 간접의문문 완전 정리</strong><br>
+        <strong>핵심 원칙</strong>: 간접의문문은 도치 없이 <em>의문사 + 주어 + 동사</em> 어순.<br>
+        <strong>비교</strong>: 직접의문문 "How <u>can you</u> help?" → 간접의문문 "ask how <u>you can</u> help" (도치 사라짐).<br>
+        <strong>주의해야 할 경우</strong>: 의문사가 주어인 경우는 도치 없이 그대로 → "I don't know <u>who did</u> this" (who가 주어이므로 어순 동일).<br>
+        <strong>수능 빈출 패턴</strong>:<br>
+        · know/understand/tell/wonder + 의문사 + S + V<br>
+        · whether(if) + S + V (yes/no 의문문의 간접의문문)<br>
+        · the question of + 의문사 + S + V<br>
+        <strong>혼동 주의</strong>: "ask how can you help" (X) — 간접의문문인데 도치한 오류. 수능 어법 선택지에서 자주 출제됨.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">how you can help 간접의문문</span>
+      </div>
+      <div class="kor-line">작업 공간으로 들어가서 당신이 어떻게 도울 수 있는지를 물어보라.</div>
+    </div>
+
+    <!-- S10 -->
+    <div class="sent key-sent">
+      <div class="sent-num">10 ★ 결론</div>
+      <div class="eng-line">If it's clear your team is in the weeds, jump in without asking.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel conj">조건</span><span class="peng">If it's clear your team is in the weeds</span><span class="pkor">팀이 어려움에 처해 있음이 명확하다면</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">jump in</span><span class="pkor">바로 뛰어들어라</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">without asking</span><span class="pkor">묻지 말고</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>in the weeds</strong>: 어려움에 처한, 감당하기 힘든 상황인 (관용 표현). <strong>jump in</strong>: (상황에) 바로 뛰어들다. <strong>without asking</strong>: 묻지 않고 — 주어 없는 분사구문(without + V-ing).
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">in the weeds 어려움에 처한</span>
+        <span class="badge key">jump in 바로 뛰어들다</span>
+        <span class="badge key">without asking 묻지 않고</span>
+      </div>
+      <div class="kor-line">팀이 어려움에 처해 있음이 분명하다면, 묻지 않고 바로 나서라.</div>
+    </div>
+
+    <div class="choices">
+      <div class="choice correct"><span class="cnum">① ✓</span> 리더는 솔선수범하여 업무에 임하고 협력해야 한다.</div>
+      <div class="choice"><span class="cnum">②</span> 주인은 판매하는 물건에 관한 모든 것을 알고 있어야 한다.</div>
+      <div class="choice"><span class="cnum">③</span> 사업의 성공적인 운영을 위해 동업자와 좋은 관계를 정립해야 한다.</div>
+      <div class="choice"><span class="cnum">④</span> 더 많은 고객을 유치하기 위해 상점을 항상 청결하게 유지해야 한다.</div>
+      <div class="choice"><span class="cnum">⑤</span> 의사 결정에 구성원의 의견을 반영하는 기업 문화를 형성해야 한다.</div>
+    </div>
+
+    <div class="summary-box">
+      <div class="sum-item">
+        <div class="sum-label logic">핵심 논리</div>
+        <div class="sum-content">서번트 리더십 실천 사례(빵집 에피소드) → 리더도 직접 일하고 본보기를 보여야 함(modeling) → 팀이 힘들 때는 묻지 않고 바로 뛰어들어야 함.</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label answer">정답 · 근거</div>
+        <div class="sum-content"><strong>①</strong> — "led by example", "jump in without asking", "pitching in" 등의 표현이 솔선수범과 협력을 직접 제시. 'servant leader'의 핵심 = 직접 일하며 본보기 보이기.</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label wrong">오답 분석</div>
+        <div class="sum-content">② 물건 지식은 본문 내용 아님 ③ 동업자 관계는 에피소드의 배경일 뿐 주장이 아님 ④ 청결 유지가 목적이 아닌 본보기 수단 ⑤ 의사결정 참여는 언급 없음</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label voca">핵심 어휘</div>
+        <div class="sum-content">embrace 받아들이다 · servant leader 서번트 리더 · lead by example 솔선수범 · be above V-ing ~을 자신의 격에 맞지 않다고 여기다 · pitch in 협력하다 · in the weeds 어려움에 처한 · jump in 뛰어들다</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ═══════════════ P42 ═══════════════ -->
+  <div class="q-panel" id="qp42">
+  <div class="q-card">
+    <div class="q-title">
+      <span class="q-num">p.42</span>
+      <span class="q-type">다음 글의 주제로 가장 적절한 것은?</span>
+      <span class="q-type-tag topic">주제</span>
+    </div>
+
+    <!-- S1 -->
+    <div class="sent key-sent">
+      <div class="sent-num">01 ★ 주제문</div>
+      <div class="eng-line">The reliance on the computer as a model for the operations of the human mind may well prove to be as limited as an earlier fascination with behaviorism.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">The reliance on the computer as a model for the operations of the human mind</span><span class="pkor">인간 정신의 작동 방식을 위한 모델로서 컴퓨터에 대한 의존</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">may well prove to be</span><span class="pkor">~로 드러날 가능성이 충분히 있다</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">as limited as an earlier fascination with behaviorism</span><span class="pkor">행동주의에 대한 이전의 열광만큼이나 한계가 있는 것으로</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>may well + V</strong>: ~할 가능성이 충분히 있다 (may보다 강한 가능성). <strong>as ... as</strong>: 동등 비교. <em>reliance on A as B</em>: A를 B로서 의지/의존하기.<br>
+        📌 <strong>참고 — may well:</strong> may well = "충분히 ~할 수 있다" (= has good reason to). may보다 확신도 높음. <em>may well prove to be limited</em> = 한계가 있음이 드러날 가능성이 충분히 있다.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">reliance on ~에 대한 의존</span>
+        <span class="badge key">may well 충분히 ~할 수 있다</span>
+        <span class="badge key">as limited as ~만큼 한계 있는</span>
+        <span class="badge key">fascination with ~에 대한 열광</span>
+        <span class="badge key">behaviorism 행동주의</span>
+      </div>
+      <div class="kor-line">인간 정신의 작동 방식을 위한 모델로서 컴퓨터에 대한 의존은, 이전에 행동주의에 열광했던 것만큼이나 한계가 있는 것으로 드러날 가능성이 충분히 있다.</div>
+    </div>
+
+    <!-- S2 -->
+    <div class="sent">
+      <div class="sent-num">02</div>
+      <div class="eng-line">Psychologists have already begun to recognize the flaws of the mind-as-computer metaphor.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">Psychologists</span><span class="pkor">심리학자들은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">have already begun to recognize</span><span class="pkor">이미 인식하기 시작했다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">the flaws of the mind-as-computer metaphor</span><span class="pkor">'마음=컴퓨터' 은유의 결함들을</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>현재완료 + begin to V</strong>: 이미 ~하기 시작했다. <em>mind-as-computer</em>: 하이픈으로 연결된 복합 형용사 (컴퓨터를 마음에 비유하는). <em>metaphor</em>: 은유.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">flaw 결함, 결점</span>
+        <span class="badge key">metaphor 은유</span>
+        <span class="badge key">mind-as-computer 마음=컴퓨터 은유</span>
+      </div>
+      <div class="kor-line">심리학자들은 이미 '마음=컴퓨터' 은유의 결함들을 인식하기 시작했다.</div>
+    </div>
+
+    <!-- S3 -->
+    <div class="sent">
+      <div class="sent-num">03</div>
+      <div class="eng-line">Some have turned to cultural anthropology as a way of understanding the factors outside any particular individual's brain that help the individual make sense out of the world.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">Some</span><span class="pkor">일부 학자들은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">have turned to</span><span class="pkor">~으로 방향을 돌렸다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">cultural anthropology</span><span class="pkor">문화인류학으로</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">as a way of understanding the factors outside any particular individual's brain</span><span class="pkor">특정 개인의 뇌 외부에 있는 요인들을 이해하는 방법으로</span></div>
+        <div class="phrase"><span class="plabel mod">관계</span><span class="peng">that help the individual make sense out of the world</span><span class="pkor">개인이 세상을 이해하도록 돕는</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>turn to A as B</strong>: A를 B로서 의지하다/활용하다. <strong>help + O + 동사원형</strong>: O가 ~하도록 돕다 (help는 to 생략 가능). <strong>make sense out of</strong>: ~을 이해하다, 파악하다.<br><br>
+        📌 <strong>(참고) 관계대명사 that — 선행사와 관계절 사이 삽입구 주의</strong><br>
+        <em>the factors [outside any particular individual's brain] <u>that</u> help the individual...</em><br>
+        선행사 <em>the factors</em>와 관계절 <em>that help</em> 사이에 전치사구 <em>outside any particular individual's brain</em>이 삽입되어 있다. 이런 구조에서 수험생들이 삽입구를 선행사로 오인하는 실수를 자주 함.<br>
+        <strong>판별 법</strong>: 삽입구를 [ ] 괄호로 빼고 읽어보면: the factors <u>that</u> help the individual make sense out of the world → that = the factors를 받는 주격 관계대명사임을 확인.<br>
+        <strong>참고 — who vs which vs that</strong>: 선행사가 사물/추상 개념(factors)이므로 who 불가, which 또는 that 사용 가능. that은 제한적 용법에서만 사용(계속적 용법 = which/who만 가능).
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">turn to A as B A를 B로 활용하다</span>
+        <span class="badge key">as a way of V-ing ~하는 방법으로</span>
+        <span class="badge key">make sense out of ~을 이해하다</span>
+        <span class="badge key">cultural anthropology 문화인류학</span>
+      </div>
+      <div class="kor-line">일부 학자들은 개인이 세상을 이해하도록 돕는 뇌 외부 요인들을 파악하는 방법으로 문화인류학으로 방향을 돌렸다.</div>
+    </div>
+
+    <!-- S4 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">04 ★ 핵심 근거</div>
+      <div class="eng-line">Others, such as Jerome Bruner, one of the founders of cognitive psychology, find that the computer analogy carries with it an unfortunate shift "from the construction of meaning to the processing of information."</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">Others, such as Jerome Bruner, one of the founders of cognitive psychology</span><span class="pkor">인지심리학의 창시자 중 한 명인 제롬 브루너와 같은 다른 학자들은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">find</span><span class="pkor">발견한다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">that the computer analogy carries with it an unfortunate shift</span><span class="pkor">컴퓨터 유추가 불행한 전환을 수반한다는 것을</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">"from the construction of meaning to the processing of information"</span><span class="pkor">"의미의 구성에서 정보의 처리로"</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>carry with it</strong>: ~을 수반하다, ~을 동반하다. <em>it</em>은 강조 대명사로 carry의 목적어를 뒤에 강조. <strong>from A to B</strong>: A에서 B로의 전환.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">carry with it ~을 수반하다</span>
+        <span class="badge key">from A to B A에서 B로</span>
+        <span class="badge key">analogy 유추, 비유</span>
+        <span class="badge key">construction of meaning 의미의 구성</span>
+        <span class="badge key">processing of information 정보의 처리</span>
+      </div>
+      <div class="kor-line">인지심리학의 창시자 중 한 명인 제롬 브루너와 같은 다른 학자들은, 컴퓨터 유추가 "의미의 구성에서 정보의 처리로"라는 불행한 전환을 수반한다는 점을 발견한다.</div>
+    </div>
+
+    <!-- S5 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">05 ★ 결론</div>
+      <div class="eng-line">Bruner's reflections on the limits of the machine model lead him back to a humanistic emphasis on narrative and story-telling as essential ingredients in understanding human cognition, a fascinating intellectual journey that reveals both the power and the limits of computers as guides to the way we think.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">Bruner's reflections on the limits of the machine model</span><span class="pkor">기계 모델의 한계에 대한 브루너의 성찰은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">lead him back to</span><span class="pkor">그를 다시 ~로 이끈다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">a humanistic emphasis on narrative and story-telling as essential ingredients in understanding human cognition</span><span class="pkor">인간 인지를 이해하는 데 필수 요소로서 서사와 스토리텔링에 대한 인본주의적 강조로</span></div>
+        <div class="phrase"><span class="plabel mod">동격</span><span class="peng">a fascinating intellectual journey that reveals both the power and the limits of computers as guides to the way we think</span><span class="pkor">우리가 생각하는 방식의 안내자로서 컴퓨터의 힘과 한계를 모두 드러내는 매혹적인 지적 여정</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>lead A back to B</strong>: A를 다시 B로 이끌다. <strong>as essential ingredients</strong>: ~로서의 필수 요소. 마지막 <em>a fascinating intellectual journey</em>는 앞 전체 절의 동격 명사구.<br>
+        📌 <strong>참고 — both A and B:</strong> <em>reveals both the power and the limits</em> = 힘과 한계를 둘 다 드러내다. both A and B는 A와 B 모두를 강조하는 표현.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">lead A back to B A를 다시 B로 이끌다</span>
+        <span class="badge key">humanistic 인본주의적인</span>
+        <span class="badge key">narrative 서사</span>
+        <span class="badge key">as essential ingredients 필수 요소로서</span>
+        <span class="badge key">cognition 인지, 인식</span>
+        <span class="badge key">both A and B A와 B 모두</span>
+      </div>
+      <div class="kor-line">기계 모델의 한계에 대한 브루너의 성찰은 그를 다시 인본주의적 관점으로 이끄는데, 서사와 스토리텔링을 인간 인지 이해의 필수 요소로 강조하는 것이다 — 이는 우리가 생각하는 방식의 안내자로서 컴퓨터의 힘과 한계를 모두 드러내는 매혹적인 지적 여정이다.</div>
+    </div>
+
+    <div class="choices">
+      <div class="choice"><span class="cnum">①</span> similarities between how humans think and how a computer works</div>
+      <div class="choice"><span class="cnum">②</span> various factors that influence how individuals understand the world</div>
+      <div class="choice"><span class="cnum">③</span> reasons for using the computer analogy when discussing the human mind</div>
+      <div class="choice correct"><span class="cnum">④ ✓</span> alternative perspectives on human cognition beyond the computer model</div>
+      <div class="choice"><span class="cnum">⑤</span> technologies that enhance the accuracy of computer-based thinking models</div>
+    </div>
+
+    <div class="summary-box">
+      <div class="sum-item">
+        <div class="sum-label logic">핵심 논리</div>
+        <div class="sum-content">컴퓨터를 인간 정신 모델로 쓰는 것의 한계 인식 → 대안적 관점들: 문화인류학, 브루너의 서사/스토리텔링 강조 → 컴퓨터 모델을 넘어선 인간 인지에 대한 대안적 시각이 주제.</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label answer">정답 · 근거</div>
+        <div class="sum-content"><strong>④</strong> — 지문 전체가 컴퓨터 모델의 한계(flaws)를 지적하고, 문화인류학·서사 등의 <em>대안적 관점</em>을 소개. ④ alternative perspectives on human cognition beyond the computer model이 정확히 일치.</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label wrong">오답 분석</div>
+        <div class="sum-content">① 유사성 비교가 아닌 한계 지적이 목적 ② 개인 뇌 외부 요인은 부분 내용 ③ 컴퓨터 유추를 사용하는 이유가 아닌 그 한계를 다룸 ⑤ 컴퓨터 기술 향상은 전혀 언급 없음</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label voca">핵심 어휘</div>
+        <div class="sum-content">reliance 의존 · flaw 결함 · metaphor 은유 · analogy 유추 · carry with it ~을 수반하다 · humanistic 인본주의적 · narrative 서사 · cognition 인지</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ═══════════════ P43 ═══════════════ -->
+  <div class="q-panel" id="qp43">
+  <div class="q-card">
+    <div class="q-title">
+      <span class="q-num">p.43</span>
+      <span class="q-type">다음 글의 주제로 가장 적절한 것은?</span>
+      <span class="q-type-tag topic">주제</span>
+    </div>
+
+    <!-- S1 -->
+    <div class="sent key-sent">
+      <div class="sent-num">01 ★ 주제문</div>
+      <div class="eng-line">In the escape that reading literature provides through vicarious identification and comparison with other lives, places, and times, we activate our imagination, that uniquely human ability to explore an alternative set of ideas and experiences that are outside our present environment and that may not even be real.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">In the escape that reading literature provides through vicarious identification and comparison with other lives, places, and times</span><span class="pkor">문학 읽기가 다른 삶·장소·시대와의 대리 동일시 및 비교를 통해 제공하는 탈출 속에서</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">we</span><span class="pkor">우리는</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">activate</span><span class="pkor">활성화한다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">our imagination</span><span class="pkor">우리의 상상력을</span></div>
+        <div class="phrase"><span class="plabel mod">동격</span><span class="peng">that uniquely human ability to explore an alternative set of ideas and experiences...</span><span class="pkor">현재 환경 밖에 있고 실제가 아닐 수도 있는 대안적 아이디어·경험을 탐구하는 독특하게 인간적인 능력</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>that uniquely human ability</strong>: <em>that</em>은 지시형용사(= this/the)로, <em>our imagination</em>과 동격 관계. <strong>to explore</strong>: 형용사적 부정사(ability를 수식). <strong>that are outside ~ and that may not</strong>: 두 개의 관계절이 and로 병렬 연결.<br>
+        📌 <strong>참고 — 동격 that vs. 관계대명사 that:</strong> <em>that uniquely human ability</em>의 that은 관계대명사가 아닌 지시형용사. 관계대명사 that은 선행사 뒤에 바로 나와 불완전한 절을 이끔.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">vicarious 대리의, 간접적인</span>
+        <span class="badge key">identification 동일시</span>
+        <span class="badge key">activate 활성화하다</span>
+        <span class="badge key">uniquely human 독특하게 인간적인</span>
+        <span class="badge key">alternative 대안적인</span>
+      </div>
+      <div class="kor-line">문학 읽기가 다른 삶·장소·시대와의 대리 동일시 및 비교를 통해 제공하는 탈출 속에서, 우리는 우리의 상상력 — 현재 환경 밖에 있고 실제가 아닐 수도 있는 대안적 아이디어와 경험을 탐구하는, 독특하게 인간적인 능력 — 을 활성화한다.</div>
+    </div>
+
+    <!-- S2 -->
+    <div class="sent">
+      <div class="sent-num">02</div>
+      <div class="eng-line">As opposed to perception that receives and processes information from the outside world — light, sound, shape — and finds meaning in it — a sunset, a symphony, a house — in imagination, the process is reversed.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel conj">대조</span><span class="peng">As opposed to perception that receives and processes information from the outside world... and finds meaning in it</span><span class="pkor">외부 세계에서 정보를 받아 처리하고 그 안에서 의미를 찾는 지각과 달리</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">in imagination</span><span class="pkor">상상 속에서는</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">the process</span><span class="pkor">그 과정이</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">is reversed</span><span class="pkor">역전된다</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>as opposed to</strong>: ~와 달리, ~와 대조적으로. <strong>is reversed</strong>: 수동태 (과정이 역전되다). 대시(—)로 삽입된 예시들(light, sound, shape / a sunset, a symphony, a house)은 앞 명사를 구체화.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">as opposed to ~와 달리, 대조적으로</span>
+        <span class="badge key">perception 지각</span>
+        <span class="badge key">be reversed 역전되다</span>
+      </div>
+      <div class="kor-line">빛·소리·형태 같은 외부 세계의 정보를 받아 처리하고 석양·교향곡·집 같은 의미를 찾는 지각과 달리, 상상 속에서는 그 과정이 역전된다.</div>
+    </div>
+
+    <!-- S3 -->
+    <div class="sent">
+      <div class="sent-num">03</div>
+      <div class="eng-line">Translating the words we read into what they signify, we populate an inner world in which imagery is created from the memory.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel mod">분사구문</span><span class="peng">Translating the words we read into what they signify</span><span class="pkor">우리가 읽는 단어들을 그것들이 의미하는 것으로 변환하면서</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">we</span><span class="pkor">우리는</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">populate</span><span class="pkor">채운다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">an inner world</span><span class="pkor">내면 세계를</span></div>
+        <div class="phrase"><span class="plabel mod">관계</span><span class="peng">in which imagery is created from the memory</span><span class="pkor">그 안에서 기억으로부터 심상이 만들어지는</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>분사구문</strong>: Translating... = As we translate... (동시 동작). <strong>what they signify</strong>: what절 = "그것들이 의미하는 것". <strong>in which</strong>: 전치사+관계대명사 (= where).<br>
+        💡 <strong>분사구문 풀어쓰기</strong>: <em>Translating the words we read into what they signify</em> = <em>As we translate the words we read into what they signify</em> (우리가 읽는 단어들을 그 의미하는 것으로 변환하면서).<br><br>
+        📌 <strong>(참고) 관계대명사 what vs 간접의문문 what 구별</strong><br>
+        이 문장의 <em>what they signify</em>는 "그것들이 의미하는 것"으로, <strong>관계대명사 what</strong>(= the thing that they signify)으로 분석하는 것이 자연스럽다.<br>
+        <strong>비교표</strong>: ① 관계대명사 what → "the thing that"으로 대체 가능. "~하는 것"으로 해석. 선행사 없음. ② 간접의문문 what → "무엇을 ~하는지"로 해석. 의문의 뉘앙스 포함.<br>
+        <strong>판별 팁</strong>: translate A into B 구조에서 B 자리의 <em>what절</em>은 "~을 …로 변환하다"이므로 관계대명사 what(=the thing that)이 더 적절. 간접의문문이라면 "그것들이 무엇을 의미하는지로 변환한다"가 되어 의미가 어색해짐.<br><br>
+        📌 <strong>(참고) 전치사+관계대명사 in which = where</strong><br>
+        <em>an inner world in which imagery is created</em> → <em>an inner world where imagery is created</em>로 바꿔 쓸 수 있다.<br>
+        <strong>원리</strong>: 관계사 앞에 전치사를 붙이면 관계부사와 동일한 기능. <em>in which</em>(장소) = where, <em>at which</em>(시간) = when, <em>for which</em>(이유) = why, <em>in which / by which</em>(방법) = how.<br>
+        <strong>주의</strong>: that은 전치사 바로 뒤에 올 수 없음 → <em>in that</em> (X) / <em>in which</em> (O).
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">translate A into B A를 B로 변환하다</span>
+        <span class="badge key">populate 채우다</span>
+        <span class="badge key">in which = where 관계부사 대체</span>
+        <span class="badge key">imagery 심상, 이미지</span>
+        <span class="badge key">signify 의미하다</span>
+      </div>
+      <div class="kor-line">읽은 단어들을 그것들이 의미하는 것으로 변환하면서, 우리는 기억으로부터 심상이 만들어지는 내면 세계를 채워나간다.</div>
+    </div>
+
+    <!-- S4 -->
+    <div class="sent">
+      <div class="sent-num">04</div>
+      <div class="eng-line">For example, we read "house" and picture a representation of a house from memory.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">For example</span><span class="pkor">예를 들어</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">we</span><span class="pkor">우리는</span></div>
+        <div class="phrase"><span class="plabel verb">V₁</span><span class="peng">read "house"</span><span class="pkor">"집"을 읽고</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">picture</span><span class="pkor">그려낸다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">a representation of a house from memory</span><span class="pkor">기억에서 집의 이미지를</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>picture</strong>: 동사로 "마음속으로 그리다, 상상하다". <em>from memory</em>: 기억에서, 기억을 바탕으로.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">picture (동사) 마음속에 그리다</span>
+        <span class="badge key">from memory 기억으로부터</span>
+        <span class="badge key">representation 표상, 이미지</span>
+      </div>
+      <div class="kor-line">예를 들어, 우리는 "집"이라는 단어를 읽고 기억 속에서 집의 이미지를 떠올린다.</div>
+    </div>
+
+    <!-- S5 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">05 ★ 핵심 근거</div>
+      <div class="eng-line">It is our imagination, the complex interweaving of perception and memory that literature activates, releasing a latent creativity that pleases.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">It</span><span class="pkor">바로 우리의 상상력이다</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">is</span><span class="pkor">~이다</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">our imagination, the complex interweaving of perception and memory that literature activates</span><span class="pkor">문학이 활성화하는 지각과 기억의 복잡한 뒤얽힘인 우리의 상상력</span></div>
+        <div class="phrase"><span class="plabel mod">분사구문</span><span class="peng">releasing a latent creativity that pleases</span><span class="pkor">즐거움을 주는 잠재적 창의성을 방출하면서</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>It is ~ that...</strong>: 강조 구문이 아님 — <em>It</em>은 주어, <em>our imagination</em>이 보어. <em>the complex interweaving of perception and memory</em>는 <em>our imagination</em>과 동격. <strong>releasing</strong>: 결과의 분사구문.<br>
+        💡 <strong>분사구문 풀어쓰기</strong>: <em>releasing a latent creativity that pleases</em> = <em>and this releases a latent creativity that pleases</em> (그리고 이것은 즐거움을 주는 잠재된 창의성을 방출한다).<br><br>
+        📌 <strong>(참고) it의 용법 — 지시 대명사 it (가주어 it 아님!)</strong><br>
+        이 문장의 <em>It is our imagination</em>은 강조 구문처럼 보이지만, 실제로는 <strong>지시 대명사 it</strong>이 주어이고 <em>our imagination</em>이 보어인 단순 주어-동사-보어 구조.<br>
+        <strong>세 가지 it 용법 비교</strong>:<br>
+        ① <strong>가주어 it</strong>: It is true <u>that</u> S+V... → 뒤에 that절/부정사가 진주어로 따라옴.<br>
+        ② <strong>지시 대명사 it</strong>: 앞 문장의 단수 명사·개념을 받음. 이 문장에서 it = 앞 문장들에서 언급된 "상상력이 작동하는 과정" 전체를 압축.<br>
+        ③ <strong>강조 구문 It is ~ that...</strong>: It is [강조 대상] that S+V... 형태. 이 문장은 that이 없으므로 강조 구문 아님.<br>
+        <strong>판별 팁</strong>: It is X that Y 구조에서 X를 지우고 Y만 남겼을 때 완전한 문장이 되면 강조 구문. 이 문장은 "our imagination ... releases a latent creativity"로 완전 → 강조 구문이 아닌 지시 it.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">interweaving 뒤얽힘, 복잡한 교차</span>
+        <span class="badge key">latent 잠재적인</span>
+        <span class="badge key">releasing 방출하면서 (결과 분사구문)</span>
+        <span class="badge key">that pleases 즐거움을 주는</span>
+      </div>
+      <div class="kor-line">바로 우리의 상상력 — 문학이 활성화하는 지각과 기억의 복잡한 뒤얽힘 — 이 즐거움을 주는 잠재된 창의성을 방출한다.</div>
+    </div>
+
+    <!-- S6 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">06 ★ 결론</div>
+      <div class="eng-line">The writer may provide the blueprint, but the reader builds literature's many rooms, and like any satisfying occupation, literature gratifies our imaginative and creative abilities.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S₁</span><span class="peng">The writer</span><span class="pkor">작가는</span></div>
+        <div class="phrase"><span class="plabel verb">V₁</span><span class="peng">may provide</span><span class="pkor">제공할 수 있지만</span></div>
+        <div class="phrase"><span class="plabel obj">O₁</span><span class="peng">the blueprint</span><span class="pkor">청사진을</span></div>
+        <div class="phrase"><span class="plabel conj">역접</span><span class="peng">but</span><span class="pkor">그러나</span></div>
+        <div class="phrase"><span class="plabel subj">S₂</span><span class="peng">the reader</span><span class="pkor">독자는</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">builds</span><span class="pkor">짓는다</span></div>
+        <div class="phrase"><span class="plabel obj">O₂</span><span class="peng">literature's many rooms</span><span class="pkor">문학의 수많은 방들을</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">like any satisfying occupation</span><span class="pkor">만족스러운 어떤 직업처럼</span></div>
+        <div class="phrase"><span class="plabel subj">S₃</span><span class="peng">literature</span><span class="pkor">문학은</span></div>
+        <div class="phrase"><span class="plabel verb">V₃</span><span class="peng">gratifies</span><span class="pkor">만족시킨다</span></div>
+        <div class="phrase"><span class="plabel obj">O₃</span><span class="peng">our imaginative and creative abilities</span><span class="pkor">우리의 상상적·창의적 능력을</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>gratify</strong>: (욕구·능력을) 만족시키다. <em>like any satisfying occupation</em>: 비유적 표현 — 문학을 읽는 행위를 만족스러운 직업에 비유.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">blueprint 청사진, 설계도</span>
+        <span class="badge key">gratify 만족시키다</span>
+        <span class="badge key">occupation 직업, 활동</span>
+        <span class="badge key">imaginative 상상력이 풍부한</span>
+      </div>
+      <div class="kor-line">작가는 청사진을 제공할 수 있지만, 독자가 문학의 수많은 방들을 짓는다. 그리고 만족스러운 어떤 직업처럼, 문학은 우리의 상상적·창의적 능력을 만족시켜 준다.</div>
+    </div>
+
+    <div class="choices">
+      <div class="choice"><span class="cnum">①</span> the influence of language on narrative structure</div>
+      <div class="choice"><span class="cnum">②</span> the role of literature in preserving historical truths</div>
+      <div class="choice"><span class="cnum">③</span> the conflict of imagination and realism in literature</div>
+      <div class="choice correct"><span class="cnum">④ ✓</span> the pleasure of imagination granted by literary experience</div>
+      <div class="choice"><span class="cnum">⑤</span> the dominance of logic over imagination in literary analysis</div>
+    </div>
+
+    <div class="summary-box">
+      <div class="sum-item">
+        <div class="sum-label logic">핵심 논리</div>
+        <div class="sum-content">문학 읽기 → 대리 동일시로 탈출 → 상상력 활성화 → 지각+기억의 복잡한 결합으로 내면 세계 구성 → 잠재 창의성 방출·만족감.</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label answer">정답 · 근거</div>
+        <div class="sum-content"><strong>④</strong> — 문학 경험이 상상력을 활성화하고 창의적 만족(latent creativity that pleases / gratifies our imaginative abilities)을 제공한다는 것이 일관된 주제.</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label wrong">오답 분석</div>
+        <div class="sum-content">① 언어의 서사 구조 영향은 언급 없음 ② 역사적 진실 보존은 지문 내용 아님 ③ 상상과 사실주의의 충돌이 아닌 상상의 즐거움 ⑤ 논리가 상상을 지배한다는 내용은 없음</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label voca">핵심 어휘</div>
+        <div class="sum-content">vicarious 대리의 · activate 활성화하다 · perception 지각 · imagery 심상 · interweaving 뒤얽힘 · latent 잠재적인 · gratify 만족시키다 · blueprint 청사진</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ═══════════════ P47 ═══════════════ -->
+  <div class="q-panel" id="qp47">
+  <div class="q-card">
+    <div class="q-title">
+      <span class="q-num">p.47</span>
+      <span class="q-type">다음 글의 제목으로 가장 적절한 것은?</span>
+      <span class="q-type-tag title">제목</span>
+    </div>
+
+    <!-- S1 -->
+    <div class="sent">
+      <div class="sent-num">01</div>
+      <div class="eng-line">In the old Soviet Union, a famous U.S. beverage company wanted to set up a bottling plant and distribution network.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">In the old Soviet Union</span><span class="pkor">구 소련에서</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">a famous U.S. beverage company</span><span class="pkor">유명한 미국 음료 회사가</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">wanted to set up</span><span class="pkor">설립하고자 했다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">a bottling plant and distribution network</span><span class="pkor">병입 공장과 유통망을</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>set up</strong>: 설립하다, 구축하다. <em>bottling plant</em>: 병입 공장(음료를 병에 담는 시설). <em>distribution network</em>: 유통망.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">set up 설립하다, 구축하다</span>
+        <span class="badge key">bottling plant 병입 공장</span>
+        <span class="badge key">distribution network 유통망</span>
+      </div>
+      <div class="kor-line">구 소련에서 한 유명한 미국 음료 회사가 병입 공장과 유통망을 설립하고자 했다.</div>
+    </div>
+
+    <!-- S2 -->
+    <div class="sent">
+      <div class="sent-num">02</div>
+      <div class="eng-line">The prevailing ideology in the old Soviet Union at the time stressed the importance of the group over the individual and the need to develop industrial capacity at the expense of consumer goods.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">The prevailing ideology in the old Soviet Union at the time</span><span class="pkor">당시 구 소련의 지배적인 이념은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">stressed</span><span class="pkor">강조했다</span></div>
+        <div class="phrase"><span class="plabel obj">O₁</span><span class="peng">the importance of the group over the individual</span><span class="pkor">개인보다 집단의 중요성을</span></div>
+        <div class="phrase"><span class="plabel conj">접속</span><span class="peng">and</span><span class="pkor">그리고</span></div>
+        <div class="phrase"><span class="plabel obj">O₂</span><span class="peng">the need to develop industrial capacity at the expense of consumer goods</span><span class="pkor">소비재를 희생하면서 산업 역량을 발전시킬 필요성을</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>at the expense of</strong>: ~을 희생하여, ~을 대가로. <strong>the importance of A over B</strong>: B보다 A의 중요성. <em>prevailing</em>: 지배적인, 우세한.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">at the expense of ~을 희생하여</span>
+        <span class="badge key">prevailing 지배적인</span>
+        <span class="badge key">ideology 이념, 이데올로기</span>
+        <span class="badge key">industrial capacity 산업 역량</span>
+        <span class="badge key">the importance of A over B B보다 A의 중요성</span>
+      </div>
+      <div class="kor-line">당시 구 소련의 지배적인 이념은 개인보다 집단의 중요성과, 소비재를 희생하면서 산업 역량을 발전시킬 필요성을 강조했다.</div>
+    </div>
+
+    <!-- S3 -->
+    <div class="sent">
+      <div class="sent-num">03</div>
+      <div class="eng-line">Soft drinks hardly seemed to fit the country's ideological priorities.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">Soft drinks</span><span class="pkor">청량음료는</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">hardly seemed to fit</span><span class="pkor">거의 맞지 않는 것처럼 보였다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">the country's ideological priorities</span><span class="pkor">그 나라의 이념적 우선순위와</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>hardly</strong>: 거의 ~않다 (준부정어). <em>fit</em>: ~에 들어맞다, 적합하다. <em>ideological priorities</em>: 이념적 우선순위.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">hardly 거의 ~않다</span>
+        <span class="badge key">fit 들어맞다, 적합하다</span>
+        <span class="badge key">ideological priorities 이념적 우선순위</span>
+      </div>
+      <div class="kor-line">청량음료는 그 나라의 이념적 우선순위에 거의 맞지 않는 것처럼 보였다.</div>
+    </div>
+
+    <!-- S4 -->
+    <div class="sent">
+      <div class="sent-num">04</div>
+      <div class="eng-line">Indeed, one government official dismissed the product as a "useless drink."</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">Indeed</span><span class="pkor">실제로</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">one government official</span><span class="pkor">한 정부 관리가</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">dismissed</span><span class="pkor">일축했다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">the product</span><span class="pkor">그 제품을</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">as a "useless drink"</span><span class="pkor">"쓸모없는 음료"라고</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>dismiss A as B</strong>: A를 B로 일축하다, B라고 무시하다.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">dismiss A as B A를 B로 일축하다</span>
+      </div>
+      <div class="kor-line">실제로 한 정부 관리는 그 제품을 "쓸모없는 음료"로 일축했다.</div>
+    </div>
+
+    <!-- S5 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">05 ★ 핵심 전환</div>
+      <div class="eng-line">Eventually, the two sides struck a deal, but not on the basis that the drink would quench the local population's thirst.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">Eventually</span><span class="pkor">결국</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">the two sides</span><span class="pkor">양측은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">struck a deal</span><span class="pkor">합의에 이르렀다</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">but not on the basis that the drink would quench the local population's thirst</span><span class="pkor">그러나 음료가 주민의 갈증을 해소한다는 근거에서가 아니라</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>strike a deal</strong>: 합의에 이르다, 거래를 성사시키다. <strong>on the basis that</strong>: ~라는 근거로 (that은 동격절을 이끔). <strong>quench</strong>: (갈증을) 풀다.<br><br>
+        📌 <strong>(참고) 동격절 that vs 관계대명사 that 구별</strong><br>
+        <em>on the basis <u>that</u> the drink would quench...</em>의 that은 <strong>동격절</strong>을 이끈다.<br>
+        <strong>비교</strong>:<br>
+        ① <strong>관계대명사 that</strong>: 선행사를 수식하며, that 이하의 절이 불완전(주어 또는 목적어 빠짐). 예: the idea <u>that</u> [he proposed] ← he proposed 뒤에 목적어 빠짐.<br>
+        ② <strong>동격절 that</strong>: 추상명사(idea, fact, belief, basis, grounds, news, claim 등)의 내용을 설명하며, that 이하의 절이 완전(S+V+O 모두 있음). 예: on the basis <u>that</u> [the drink would quench the thirst] ← 완전한 절.<br>
+        <strong>판별 팁</strong>: that절이 완전한 문장이면 동격절, 불완전하면 관계대명사. 또한 동격절을 이끄는 명사는 idea/fact/belief/basis/grounds/claim/news/evidence 등 추상명사.
+        <br><br>📌 <strong>(참고) on the basis that vs on the grounds that</strong><br>
+        이 지문에서 S5는 <em>on the basis that</em>, S6는 <em>on the grounds that</em>을 사용 — 두 표현 모두 "~라는 근거로"라는 동일한 의미의 동격절 구조. 수능에서는 두 표현 모두 자주 등장하며 구조도 동일.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">strike a deal 합의를 이끌어내다</span>
+        <span class="badge key">on the basis that ~라는 근거로</span>
+        <span class="badge key">quench 갈증을 풀다</span>
+      </div>
+      <div class="kor-line">결국 양측은 합의에 이르렀지만, 그것은 음료가 주민의 갈증을 해소한다는 근거에서가 아니었다.</div>
+    </div>
+
+    <!-- S6 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">06 ★ 핵심 근거(정답)</div>
+      <div class="eng-line">Instead, the U.S. negotiators justified the project on the grounds that it would contribute to the country's industrial development.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel conj">역접</span><span class="peng">Instead</span><span class="pkor">대신에</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">the U.S. negotiators</span><span class="pkor">미국 협상가들은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">justified</span><span class="pkor">정당화했다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">the project</span><span class="pkor">그 프로젝트를</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">on the grounds that it would contribute to the country's industrial development</span><span class="pkor">그것이 국가의 산업 발전에 기여할 것이라는 근거로</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>justify A on the grounds that</strong>: ~라는 근거로 A를 정당화하다. <strong>on the grounds that</strong>: that이 동격절을 이끔 (= on the basis that). <strong>contribute to</strong>: ~에 기여하다.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">justify 정당화하다</span>
+        <span class="badge key">on the grounds that ~라는 근거로</span>
+        <span class="badge key">contribute to ~에 기여하다</span>
+      </div>
+      <div class="kor-line">대신에 미국 협상가들은 그 프로젝트가 국가의 산업 발전에 기여할 것이라는 근거로 프로젝트를 정당화했다.</div>
+    </div>
+
+    <!-- S7 -->
+    <div class="sent">
+      <div class="sent-num">07</div>
+      <div class="eng-line">They restructured the project to include a heavy training component for local workers and managers, as well as a farm that would grow certain of the drink's ingredients.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">They</span><span class="pkor">그들은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">restructured</span><span class="pkor">재구성했다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">the project</span><span class="pkor">그 프로젝트를</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">to include a heavy training component for local workers and managers</span><span class="pkor">현지 근로자와 관리자를 위한 대규모 교육 요소를 포함하도록</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">as well as a farm that would grow certain of the drink's ingredients</span><span class="pkor">그리고 음료의 특정 원료를 재배할 농장도 포함하여</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>restructure A to include B</strong>: B를 포함하도록 A를 재구성하다. <strong>A as well as B</strong>: B뿐 아니라 A도. <em>heavy training component</em>: 대규모 교육 요소.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">restructure 재구성하다</span>
+        <span class="badge key">A as well as B B뿐만 아니라 A도</span>
+        <span class="badge key">component 구성 요소</span>
+        <span class="badge key">ingredient 원료, 재료</span>
+      </div>
+      <div class="kor-line">그들은 현지 근로자와 관리자를 위한 대규모 교육 요소와, 음료의 특정 원료를 재배할 농장을 포함하도록 프로젝트를 재구성했다.</div>
+    </div>
+
+    <!-- S8 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">08 ★ 결론</div>
+      <div class="eng-line">In addition, the company promised to make efforts to persuade other American companies to consider investments in the country.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">In addition</span><span class="pkor">또한</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">the company</span><span class="pkor">그 회사는</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">promised to make efforts to persuade</span><span class="pkor">설득하기 위해 노력하겠다고 약속했다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">other American companies</span><span class="pkor">다른 미국 기업들을</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">to consider investments in the country</span><span class="pkor">그 나라에 투자를 검토하도록</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>make efforts to V</strong>: ~하기 위해 노력하다. <strong>persuade A to V</strong>: A가 ~하도록 설득하다.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">make efforts to V ~하기 위해 노력하다</span>
+        <span class="badge key">persuade A to V A가 ~하도록 설득하다</span>
+      </div>
+      <div class="kor-line">또한 그 회사는 다른 미국 기업들이 그 나라에 투자를 검토하도록 설득하기 위해 노력하겠다고 약속했다.</div>
+    </div>
+
+    <div class="choices">
+      <div class="choice correct"><span class="cnum">① ✓</span> Scratching the Other's Back Gets You the Deal</div>
+      <div class="choice"><span class="cnum">②</span> How a Beverage Company Changed Soviet Ideology</div>
+      <div class="choice"><span class="cnum">③</span> American Products: Cultural Symbols in the Cold War</div>
+      <div class="choice"><span class="cnum">④</span> Walking in Their Shoes Makes Forgiveness More Likely</div>
+      <div class="choice"><span class="cnum">⑤</span> No Halfway: Strategies for Negotiating a Winning Outcome</div>
+    </div>
+
+    <div class="summary-box">
+      <div class="sum-item">
+        <div class="sum-label logic">핵심 논리</div>
+        <div class="sum-content">소련 이념(집단·산업 우선)과 상충하는 청량음료 프로젝트 → 이념에 맞게 산업 발전·교육·농장으로 재프레이밍 → 합의 성사. 핵심: 상대방이 원하는 것을 채워주는 방식으로 협상 성공 = "등을 긁어주기".</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label answer">정답 · 근거</div>
+        <div class="sum-content"><strong>①</strong> — "Scratching the Other's Back" = 상대방의 이념적 필요(산업·교육)를 충족시켜 줌 → "Gets You the Deal" = 합의 성사. 상호 이익 프레이밍 협상 전략이 핵심.</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label wrong">오답 분석</div>
+        <div class="sum-content">② 소련 이념을 '바꾼' 것이 아닌 이념에 '맞춘' 것 ③ 문화적 상징 논의 없음 ④ 용서(forgiveness)는 관련 없음 ⑤ "무조건 밀어붙이는" 전략이 아닌 상대방 관점 채택이 핵심</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label voca">핵심 어휘</div>
+        <div class="sum-content">prevailing 지배적인 · at the expense of ~을 희생하여 · dismiss A as B A를 B로 일축하다 · strike a deal 합의 성사 · on the grounds that ~라는 근거로 · justify 정당화하다 · restructure 재구성하다</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ═══════════════ P49 ═══════════════ -->
+  <div class="q-panel" id="qp49">
+  <div class="q-card">
+    <div class="q-title">
+      <span class="q-num">p.49</span>
+      <span class="q-type">다음 글의 제목으로 가장 적절한 것은?</span>
+      <span class="q-type-tag title">제목</span>
+    </div>
+
+    <!-- S1 -->
+    <div class="sent">
+      <div class="sent-num">01</div>
+      <div class="eng-line">Limited animation is a process of making animated cartoons that does not follow a "realistic" approach.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">Limited animation</span><span class="pkor">제한적 애니메이션은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">is</span><span class="pkor">~이다</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">a process of making animated cartoons that does not follow a "realistic" approach</span><span class="pkor">"사실적" 접근 방식을 따르지 않는 애니메이션 만화를 제작하는 과정</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>a process of V-ing</strong>: ~하는 과정. <em>that does not follow</em>: 관계대명사 that, 선행사 <em>a process</em>를 수식.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">limited animation 제한적 애니메이션</span>
+        <span class="badge key">follow a realistic approach 사실적 접근 방식을 따르다</span>
+      </div>
+      <div class="kor-line">제한적 애니메이션은 "사실적" 접근 방식을 따르지 않는 만화를 제작하는 과정이다.</div>
+    </div>
+
+    <!-- S2 -->
+    <div class="sent">
+      <div class="sent-num">02</div>
+      <div class="eng-line">The short cartoons and feature films of Walt Disney from the 1930s and 1940s are widely acclaimed for depicting animated simulations of reality, with exquisite detail in every frame.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">The short cartoons and feature films of Walt Disney from the 1930s and 1940s</span><span class="pkor">1930~40년대 월트 디즈니의 단편 만화와 장편 영화들은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">are widely acclaimed for</span><span class="pkor">~로 널리 격찬받는다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">depicting animated simulations of reality</span><span class="pkor">현실의 애니메이션 시뮬레이션을 묘사하는 것으로</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">with exquisite detail in every frame</span><span class="pkor">모든 프레임에 정교한 세부 묘사와 함께</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>be acclaimed for V-ing</strong>: ~로 격찬받다. <em>with exquisite detail</em>: with + 명사구 (부대상황 — 정교한 세부 묘사와 함께). <em>exquisite</em>: 정교한, 매우 아름다운.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">be acclaimed for V-ing ~로 격찬받다</span>
+        <span class="badge key">depict 묘사하다</span>
+        <span class="badge key">simulation 시뮬레이션, 모의</span>
+        <span class="badge key">exquisite 정교한, 매우 아름다운</span>
+      </div>
+      <div class="kor-line">1930~40년대 월트 디즈니의 단편 만화와 장편 영화들은 모든 프레임에 정교한 세부 묘사를 담아 현실을 애니메이션으로 시뮬레이션한 것으로 널리 격찬받는다.</div>
+    </div>
+
+    <!-- S3 -->
+    <div class="sent">
+      <div class="sent-num">03</div>
+      <div class="eng-line">However, this style of animation is very time-consuming and expensive.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel conj">역접</span><span class="peng">However</span><span class="pkor">그러나</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">this style of animation</span><span class="pkor">이러한 애니메이션 방식은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">is</span><span class="pkor">~이다</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">very time-consuming and expensive</span><span class="pkor">매우 시간이 많이 걸리고 비용이 많이 드는</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>time-consuming</strong>: 시간이 많이 걸리는 (복합 형용사). 사실적 애니메이션의 단점 제시 → 제한적 애니메이션의 필요성 도입.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">time-consuming 시간이 많이 걸리는</span>
+      </div>
+      <div class="kor-line">그러나 이 애니메이션 방식은 매우 시간이 많이 걸리고 비용이 많이 든다.</div>
+    </div>
+
+    <!-- S4 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">04 ★ 핵심 정의</div>
+      <div class="eng-line">"Limited" animation creates an image that uses abstract art, symbolism, and limited movement to create the same effect, but at a much lower production cost.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">"Limited" animation</span><span class="pkor">"제한적" 애니메이션은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">creates</span><span class="pkor">만들어낸다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">an image that uses abstract art, symbolism, and limited movement</span><span class="pkor">추상 예술, 상징주의, 제한된 움직임을 사용하는 이미지를</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">to create the same effect, but at a much lower production cost</span><span class="pkor">동일한 효과를 만들되, 훨씬 낮은 제작 비용으로</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>to create the same effect</strong>: 목적의 부정사. <em>at a much lower production cost</em>: but 뒤에 생략된 구조 (= but [it creates the same effect] at a much lower production cost).
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">abstract art 추상 예술</span>
+        <span class="badge key">symbolism 상징주의</span>
+        <span class="badge key">production cost 제작 비용</span>
+      </div>
+      <div class="kor-line">"제한적" 애니메이션은 추상 예술, 상징주의, 제한된 움직임을 활용하여 동일한 효과를 훨씬 낮은 제작 비용으로 만들어낸다.</div>
+    </div>
+
+    <!-- S5 -->
+    <div class="sent">
+      <div class="sent-num">05</div>
+      <div class="eng-line">This style of animation depends more upon suspension of disbelief to tell a story; the story exists more in the viewer's imagination.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S₁</span><span class="peng">This style of animation</span><span class="pkor">이 애니메이션 방식은</span></div>
+        <div class="phrase"><span class="plabel verb">V₁</span><span class="peng">depends more upon</span><span class="pkor">더 많이 의존한다</span></div>
+        <div class="phrase"><span class="plabel obj">O₁</span><span class="peng">suspension of disbelief</span><span class="pkor">불신의 유예에</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">to tell a story</span><span class="pkor">이야기를 전달하기 위해</span></div>
+        <div class="phrase"><span class="plabel subj">S₂</span><span class="peng">the story</span><span class="pkor">이야기는</span></div>
+        <div class="phrase"><span class="plabel verb">V₂</span><span class="peng">exists more</span><span class="pkor">더 많이 존재한다</span></div>
+        <div class="phrase"><span class="plabel mod">M</span><span class="peng">in the viewer's imagination</span><span class="pkor">시청자의 상상 속에</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>suspension of disbelief</strong>: 불신의 유예 — 문학·영화 이론 용어. 비현실적인 설정을 의심 없이 받아들이는 심리 상태. <em>depend upon</em>: ~에 의존하다 (= depend on).
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">suspension of disbelief 불신의 유예</span>
+        <span class="badge key">depend upon ~에 의존하다</span>
+        <span class="badge key">viewer's imagination 시청자의 상상력</span>
+      </div>
+      <div class="kor-line">이 애니메이션 방식은 이야기를 전달하기 위해 불신의 유예에 더 많이 의존하며, 이야기는 시청자의 상상 속에 더 많이 존재한다.</div>
+    </div>
+
+    <!-- S6 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">06 ★ 핵심 장점</div>
+      <div class="eng-line">It also encourages the animators to indulge in artistic styles that are not necessarily bound to the limits of the real world.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">It</span><span class="pkor">그것은(제한적 애니메이션은)</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">also encourages</span><span class="pkor">또한 장려한다</span></div>
+        <div class="phrase"><span class="plabel obj">O</span><span class="peng">the animators</span><span class="pkor">애니메이터들이</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">to indulge in artistic styles that are not necessarily bound to the limits of the real world</span><span class="pkor">반드시 현실 세계의 한계에 얽매이지 않는 예술적 스타일에 몰두하도록</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>encourage A to V</strong>: A가 ~하도록 장려하다. <strong>indulge in</strong>: ~에 몰두하다. <strong>not necessarily</strong>: 반드시 ~인 것은 아니다 (부분 부정). <strong>be bound to</strong>: ~에 얽매이다.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">encourage A to V A가 ~하도록 장려하다</span>
+        <span class="badge key">indulge in ~에 몰두하다</span>
+        <span class="badge key">not necessarily 반드시 ~인 것은 아니다</span>
+        <span class="badge key">be bound to ~에 얽매이다</span>
+      </div>
+      <div class="kor-line">그것은 또한 애니메이터들이 반드시 현실 세계의 한계에 얽매이지 않는 예술적 스타일에 몰두하도록 장려한다.</div>
+    </div>
+
+    <!-- S7 KEY -->
+    <div class="sent key-sent">
+      <div class="sent-num">07 ★ 결론</div>
+      <div class="eng-line">The result is a new artistic style that could not have developed if animation was solely devoted to producing simulations of reality.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">The result</span><span class="pkor">그 결과는</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">is</span><span class="pkor">~이다</span></div>
+        <div class="phrase"><span class="plabel comp">C</span><span class="peng">a new artistic style that could not have developed</span><span class="pkor">발전하지 못했을 새로운 예술 양식</span></div>
+        <div class="phrase"><span class="plabel conj">조건</span><span class="peng">if animation was solely devoted to producing simulations of reality</span><span class="pkor">만약 애니메이션이 오직 현실 시뮬레이션 제작에만 전념했다면</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>혼합 가정법</strong>: if + 과거시제(was) + could not have p.p. → 과거 조건 + 과거의 결과에 반하는 가정. <strong>be devoted to V-ing</strong>: ~에 전념하다. <em>solely</em>: 오직, 단지.<br>
+        📌 <strong>(참고) Without + 가정법 완전 정리</strong><br>
+        <strong>Without + 명사</strong>는 가정법 조건절을 대신할 수 있다.<br>
+        <em>Without limited animation, ... could never have been produced</em><br>
+        = <em>If there had been no limited animation, ... could never have been produced</em><br>
+        = <em>If it had not been for limited animation, ... could never have been produced</em><br>
+        <strong>시제에 따른 의미</strong>:<br>
+        ① <strong>현재 가정</strong>: Without your help (= If it were not for your help), I would fail.<br>
+        ② <strong>과거 가정</strong>: Without your help (= If it had not been for your help), I would have failed.<br>
+        <strong>수능 출제 포인트</strong>: without절이 과거 상황이면 주절에 would/could have p.p.가 오는지 확인. 이 문장처럼 주절이 could never have been produced (과거완료) → without = 과거 가정법 조건.
+        <br><br>📌 <strong>(참고) but for / were it not for / had it not been for</strong><br>
+        Without과 동일하게 쓰이는 표현들:<br>
+        · <em>But for</em> limited animation = Without limited animation<br>
+        · <em>Were it not for</em> (현재 가정) = If it were not for<br>
+        · <em>Had it not been for</em> (과거 가정) = If it had not been for<br>
+        이 중 <em>Were it not for / Had it not been for</em>는 if를 생략하고 도치한 형태.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">could not have p.p. ~하지 못했을 것이다</span>
+        <span class="badge key">be devoted to V-ing ~에 전념하다</span>
+        <span class="badge key">solely 오직, 단지</span>
+        <span class="badge key">simulation of reality 현실 시뮬레이션</span>
+      </div>
+      <div class="kor-line">그 결과는, 만약 애니메이션이 오직 현실 시뮬레이션 제작에만 전념했다면 발전하지 못했을 새로운 예술 양식이다.</div>
+    </div>
+
+    <!-- S8 -->
+    <div class="sent key-sent">
+      <div class="sent-num">08 ★ 결론</div>
+      <div class="eng-line">Without limited animation, such ground-breaking films as Yellow Submarine, Chuck Jones' The Dot and the Line, and many others could never have been produced.</div>
+      <div class="parse-box">
+        <div class="phrase"><span class="plabel conj">조건(without)</span><span class="peng">Without limited animation</span><span class="pkor">제한적 애니메이션이 없었다면</span></div>
+        <div class="phrase"><span class="plabel subj">S</span><span class="peng">such ground-breaking films as Yellow Submarine, Chuck Jones' The Dot and the Line, and many others</span><span class="pkor">Yellow Submarine, The Dot and the Line 등의 획기적인 영화들은</span></div>
+        <div class="phrase"><span class="plabel verb">V</span><span class="peng">could never have been produced</span><span class="pkor">결코 제작되지 못했을 것이다</span></div>
+      </div>
+      <div class="grammar-note">
+        <span class="gn-tag grammar">★어법</span>
+        <strong>Without + 명사구</strong>: 가정법 과거완료 대체 표현. = <em>If there had been no limited animation</em>. <strong>such A as B</strong>: B와 같은 A. <strong>could never have been produced</strong>: 부정의 가정법 과거완료 수동태.
+      </div>
+      <div class="vocab-badges">
+        <span class="badge key">without = if there had been no 가정법 대체</span>
+        <span class="badge key">ground-breaking 획기적인</span>
+        <span class="badge key">such A as B B와 같은 A</span>
+        <span class="badge key">could never have been p.p. 결코 ~되지 못했을 것이다</span>
+      </div>
+      <div class="kor-line">제한적 애니메이션이 없었다면, Yellow Submarine이나 Chuck Jones의 The Dot and the Line 같은 획기적인 영화들은 결코 제작되지 못했을 것이다.</div>
+    </div>
+
+    <div class="choices">
+      <div class="choice correct"><span class="cnum">① ✓</span> Advantages of Limited Animation with Less Realism</div>
+      <div class="choice"><span class="cnum">②</span> Why Does Animation Cost So Much and Take So Long?</div>
+      <div class="choice"><span class="cnum">③</span> How Do Artists and Animators Find Their Unique Styles?</div>
+      <div class="choice"><span class="cnum">④</span> Primitive Animation Before the Age of Limited Animation</div>
+      <div class="choice"><span class="cnum">⑤</span> How to Make Animated Videos: Everything You Need to Know</div>
+    </div>
+
+    <div class="summary-box">
+      <div class="sum-item">
+        <div class="sum-label logic">핵심 논리</div>
+        <div class="sum-content">사실적 애니메이션(디즈니 스타일) = 높은 완성도 but 시간·비용 과다 → 제한적 애니메이션 = 추상·상징으로 동일 효과를 저비용으로 + 창의적 자유 → 새로운 예술 양식 탄생 (Yellow Submarine 등).</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label answer">정답 · 근거</div>
+        <div class="sum-content"><strong>①</strong> — 지문 전체가 제한적 애니메이션의 장점(저비용, 창의적 자유, 새 예술 양식)을 논의. "Less Realism"이 지문의 "does not follow a realistic approach"와 일치.</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label wrong">오답 분석</div>
+        <div class="sum-content">② 비용이 많이 드는 것은 사실적 애니메이션(제한적 애니메이션의 반대) ③ 고유 스타일 찾기 방법은 부분 내용 ④ 제한적 애니메이션 이전 원시 애니메이션은 언급 없음 ⑤ 제작 방법 전반 안내가 아님</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label voca">핵심 어휘</div>
+        <div class="sum-content">acclaimed 격찬받는 · exquisite 정교한 · time-consuming 시간이 많이 걸리는 · suspension of disbelief 불신의 유예 · indulge in ~에 몰두하다 · ground-breaking 획기적인 · be devoted to ~에 전념하다</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="footer">
+    <div class="brand">2027 수능특강 영어 구문 분석</div>
+    <div class="by">Witheun by.은서쌤</div>
+  </div>
+</div>
+
+<script>
+/* ── 탭 네비게이션 ── */
+const pills = document.querySelectorAll('.pill');
+const panels = document.querySelectorAll('.q-panel');
+pills.forEach(pill => {
+  pill.addEventListener('click', () => {
+    pills.forEach(p => p.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    document.getElementById(pill.dataset.q).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  const active = document.querySelector('.pill.active');
+  const allPills = [...pills];
+  const idx = allPills.indexOf(active);
+  if (e.key === 'ArrowRight' && idx < allPills.length - 1) allPills[idx+1].click();
+  else if (e.key === 'ArrowLeft' && idx > 0) allPills[idx-1].click();
+});
+</script>
+
+<!-- ═══════════ 레이저/펜 툴바 ═══════════ -->
+<style>
+/* ── 캔버스 오버레이 ── */
+#drawCanvas {
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 9000;
+  pointer-events: none;
+  display: block;
+}
+#drawCanvas.pen-active   { pointer-events: all; cursor: crosshair; }
+#drawCanvas.erase-active { pointer-events: all; cursor: none; }
+
+/* ── 레이저 포인터 ── */
+#laser {
+  position: fixed;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, #ff2020 35%, rgba(255,30,30,0.3) 70%, transparent 100%);
+  box-shadow: 0 0 6px 4px rgba(255,0,0,0.55), 0 0 18px 8px rgba(255,0,0,0.25);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  display: none;
+}
+
+/* ── 지우개 커서 ── */
+#eraseCursor {
+  position: fixed;
+  border-radius: 50%;
+  border: 2px solid #999;
+  background: rgba(255,255,255,0.35);
+  pointer-events: none;
+  z-index: 9998;
+  display: none;
+  transform: translate(-50%, -50%);
+}
+
+/* ── 툴바 ── */
+#classToolbar {
+  position: fixed;
+  bottom: 24px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 9500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(17,24,39,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100px;
+  padding: 8px 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+.tb-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: rgba(255,255,255,0.65);
+  font-size: 17px;
+  cursor: pointer;
+  transition: all .18s;
+  position: relative;
+}
+.tb-btn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.tb-btn.active-tool { background: rgba(255,255,255,0.18); color: #fff; }
+.tb-btn.laser-on  { background: rgba(255,50,50,0.3);  color: #ff6060; }
+.tb-btn.pen-on    { background: rgba(49,130,246,0.3); color: #60a5fa; }
+.tb-btn.erase-on  { background: rgba(250,204,21,0.2); color: #fde047; }
+.tb-sep { width: 1px; height: 22px; background: rgba(255,255,255,0.15); margin: 0 2px; }
+
+/* 색상 팔레트 */
+#colorPalette {
+  display: flex; gap: 5px; align-items: center;
+  overflow: hidden; max-width: 0;
+  transition: max-width .25s ease, opacity .25s ease;
+  opacity: 0;
+}
+#colorPalette.visible { max-width: 200px; opacity: 1; }
+.color-dot {
+  width: 20px; height: 20px; border-radius: 50%;
+  cursor: pointer; border: 2px solid transparent;
+  transition: transform .15s, border-color .15s;
+  flex-shrink: 0;
+}
+.color-dot:hover { transform: scale(1.2); }
+.color-dot.selected { border-color: #fff; transform: scale(1.15); }
+
+/* 굵기 슬라이더 팝오버 */
+#sizePopover {
+  position: absolute;
+  bottom: 52px; left: 50%;
+  transform: translateX(-50%);
+  background: rgba(17,24,39,0.95);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: none;
+  white-space: nowrap;
+  gap: 8px;
+  align-items: center;
+  color: rgba(255,255,255,0.75);
+  font-size: 12px;
+}
+#sizePopover.open { display: flex; }
+#brushSize { width: 90px; accent-color: #3182f6; }
+
+/* 키보드 힌트 */
+#kbHint {
+  position: fixed;
+  top: 14px; right: 14px;
+  background: rgba(17,24,39,0.82);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.75;
+  z-index: 9400;
+  pointer-events: none;
+  display: none;
+}
+#kbHint.visible { display: block; }
+#kbHint kbd {
+  background: rgba(255,255,255,0.12);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 10px;
+  color: rgba(255,255,255,0.75);
+}
+</style>
+
+<!-- 캔버스 & 레이저 -->
+<canvas id="drawCanvas"></canvas>
+<div id="laser"></div>
+<div id="eraseCursor"></div>
+
+<!-- 툴바 -->
+<div id="classToolbar">
+  <button class="tb-btn" id="btnLaser"  title="레이저 포인터 (L)">🔴</button>
+  <button class="tb-btn" id="btnPen"    title="펜 (P)">✏️</button>
+  <button class="tb-btn" id="btnErase"  title="지우개 (E)">🧹</button>
+  <div id="colorPalette">
+    <div class="color-dot selected" data-color="#ef4444" style="background:#ef4444"></div>
+    <div class="color-dot" data-color="#f97316" style="background:#f97316"></div>
+    <div class="color-dot" data-color="#facc15" style="background:#facc15"></div>
+    <div class="color-dot" data-color="#4ade80" style="background:#4ade80"></div>
+    <div class="color-dot" data-color="#60a5fa" style="background:#60a5fa"></div>
+    <div class="color-dot" data-color="#c084fc" style="background:#c084fc"></div>
+    <div class="color-dot" data-color="#ffffff" style="background:#fff;"></div>
+    <div class="color-dot" data-color="#1e293b" style="background:#1e293b;border:2px solid #555;"></div>
+  </div>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnSize"  title="굵기 조절">〇
+    <div id="sizePopover">
+      <span>굵기</span>
+      <input type="range" id="brushSize" min="2" max="30" value="5">
+      <span id="sizeVal">5</span>
+    </div>
+  </button>
+  <button class="tb-btn" id="btnUndo"  title="실행취소 (Ctrl+Z)">↩</button>
+  <button class="tb-btn" id="btnClear" title="전체 지우기 (Del)">🗑</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnHide"  title="툴바 숨기기/보이기 (T)" style="font-size:13px;opacity:0.5">⬇</button>
+</div>
+
+<!-- 키보드 힌트 배지 -->
+<div id="kbHint">
+  <kbd>L</kbd> 레이저 &nbsp; <kbd>P</kbd> 펜 &nbsp; <kbd>E</kbd> 지우개<br>
+  <kbd>Del</kbd> 전체 지우기 &nbsp; <kbd>Esc</kbd> 도구 해제<br>
+  <kbd>Ctrl+Z</kbd> 실행취소 &nbsp; <kbd>T</kbd> 툴바 토글
+</div>
+
+<script>
+(function() {
+  /* ───── 상태 ───── */
+  let mode = null; // 'laser' | 'pen' | 'erase' | null
+  let penColor = '#ef4444';
+  let penSize  = 5;
+  let isDrawing = false;
+  let lastX = 0, lastY = 0;
+  const undoStack = [];
+  const MAX_UNDO  = 30;
+
+  /* ───── DOM ───── */
+  const canvas      = document.getElementById('drawCanvas');
+  const ctx         = canvas.getContext('2d');
+  const laser       = document.getElementById('laser');
+  const eraseCursor = document.getElementById('eraseCursor');
+  const btnLaser    = document.getElementById('btnLaser');
+  const btnPen      = document.getElementById('btnPen');
+  const btnErase    = document.getElementById('btnErase');
+  const btnSize     = document.getElementById('btnSize');
+  const btnUndo     = document.getElementById('btnUndo');
+  const btnClear    = document.getElementById('btnClear');
+  const btnHide     = document.getElementById('btnHide');
+  const palette     = document.getElementById('colorPalette');
+  const brushRange  = document.getElementById('brushSize');
+  const sizeVal     = document.getElementById('sizeVal');
+  const sizePopover = document.getElementById('sizePopover');
+  const toolbar     = document.getElementById('classToolbar');
+  const kbHint      = document.getElementById('kbHint');
+
+  /* ───── 캔버스 크기 동기화 ───── */
+  function resizeCanvas() {
+    const snap = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.putImageData(snap, 0, 0);
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  /* ───── 모드 전환 ───── */
+  function setMode(m) {
+    mode = (mode === m) ? null : m; // 같은 버튼 누르면 해제
+    // 클래스 리셋
+    canvas.classList.remove('pen-active', 'erase-active');
+    btnLaser.classList.remove('laser-on');
+    btnPen.classList.remove('pen-on');
+    btnErase.classList.remove('erase-on');
+    laser.style.display = 'none';
+    eraseCursor.style.display = 'none';
+    document.body.style.cursor = '';
+    palette.classList.remove('visible');
+    kbHint.classList.remove('visible');
+
+    if (mode === 'laser') {
+      btnLaser.classList.add('laser-on');
+      document.body.style.cursor = 'none';
+      laser.style.display = 'block';
+      kbHint.classList.add('visible');
+    } else if (mode === 'pen') {
+      btnPen.classList.add('pen-on');
+      canvas.classList.add('pen-active');
+      palette.classList.add('visible');
+      kbHint.classList.add('visible');
+    } else if (mode === 'erase') {
+      btnErase.classList.add('erase-on');
+      canvas.classList.add('erase-active');
+      eraseCursor.style.display = 'block';
+      kbHint.classList.add('visible');
+    }
+  }
+
+  btnLaser.addEventListener('click', () => setMode('laser'));
+  btnPen.addEventListener('click',   () => setMode('pen'));
+  btnErase.addEventListener('click', () => setMode('erase'));
+
+  /* ───── 색상 팔레트 ───── */
+  document.querySelectorAll('.color-dot').forEach(dot => {
+    dot.addEventListener('click', () => {
+      document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+      dot.classList.add('selected');
+      penColor = dot.dataset.color;
+      if (mode !== 'pen') setMode('pen');
+    });
+  });
+
+  /* ───── 굵기 슬라이더 ───── */
+  brushRange.addEventListener('input', () => {
+    penSize = parseInt(brushRange.value);
+    sizeVal.textContent = penSize;
+    eraseCursor.style.width  = (penSize * 3) + 'px';
+    eraseCursor.style.height = (penSize * 3) + 'px';
+  });
+  btnSize.addEventListener('click', (e) => {
+    e.stopPropagation();
+    sizePopover.classList.toggle('open');
+  });
+  document.addEventListener('click', () => sizePopover.classList.remove('open'));
+
+  /* ───── 마우스 이벤트 ───── */
+  document.addEventListener('mousemove', e => {
+    const x = e.clientX, y = e.clientY;
+
+    // 레이저 포인터
+    if (mode === 'laser') {
+      laser.style.left = x + 'px';
+      laser.style.top  = y + 'px';
+    }
+    // 지우개 커서 표시
+    if (mode === 'erase') {
+      const sz = penSize * 3;
+      eraseCursor.style.left   = x + 'px';
+      eraseCursor.style.top    = y + 'px';
+      eraseCursor.style.width  = sz + 'px';
+      eraseCursor.style.height = sz + 'px';
+    }
+  });
+
+  /* ── 펜 그리기 ── */
+  canvas.addEventListener('mousedown', e => {
+    if (mode !== 'pen' && mode !== 'erase') return;
+    isDrawing = true;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    // 실행취소 스냅샷
+    if (mode === 'pen') {
+      undoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+      if (undoStack.length > MAX_UNDO) undoStack.shift();
+    }
+    ctx.beginPath();
+    ctx.arc(e.clientX, e.clientY, mode === 'erase' ? penSize * 1.5 : penSize / 2, 0, Math.PI * 2);
+    if (mode === 'pen') { ctx.fillStyle = penColor; ctx.fill(); }
+    else { ctx.clearRect(e.clientX - penSize*1.5, e.clientY - penSize*1.5, penSize*3, penSize*3); }
+  });
+  canvas.addEventListener('mousemove', e => {
+    if (!isDrawing) return;
+    if (mode === 'pen') {
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.clientX, e.clientY);
+      ctx.strokeStyle = penColor;
+      ctx.lineWidth   = penSize;
+      ctx.lineCap     = 'round';
+      ctx.lineJoin    = 'round';
+      ctx.stroke();
+    } else if (mode === 'erase') {
+      const sz = penSize * 1.5;
+      ctx.clearRect(e.clientX - sz, e.clientY - sz, sz*2, sz*2);
+    }
+    lastX = e.clientX;
+    lastY = e.clientY;
+  });
+  canvas.addEventListener('mouseup',    () => { isDrawing = false; });
+  canvas.addEventListener('mouseleave', () => { isDrawing = false; });
+
+  /* ── 터치 지원 ── */
+  canvas.addEventListener('touchstart', e => {
+    if (mode !== 'pen' && mode !== 'erase') return;
+    e.preventDefault();
+    const t = e.touches[0];
+    isDrawing = true;
+    lastX = t.clientX; lastY = t.clientY;
+    if (mode === 'pen') {
+      undoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+      if (undoStack.length > MAX_UNDO) undoStack.shift();
+    }
+  }, { passive: false });
+  canvas.addEventListener('touchmove', e => {
+    if (!isDrawing) return;
+    e.preventDefault();
+    const t = e.touches[0];
+    if (mode === 'pen') {
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(t.clientX, t.clientY);
+      ctx.strokeStyle = penColor;
+      ctx.lineWidth   = penSize;
+      ctx.lineCap     = 'round';
+      ctx.lineJoin    = 'round';
+      ctx.stroke();
+    } else if (mode === 'erase') {
+      const sz = penSize * 1.5;
+      ctx.clearRect(t.clientX - sz, t.clientY - sz, sz*2, sz*2);
+    }
+    lastX = t.clientX; lastY = t.clientY;
+  }, { passive: false });
+  canvas.addEventListener('touchend', () => { isDrawing = false; });
+
+  /* ───── 실행취소 / 전체 지우기 ───── */
+  btnUndo.addEventListener('click', undoAction);
+  btnClear.addEventListener('click', clearAll);
+
+  function undoAction() {
+    if (undoStack.length === 0) return;
+    ctx.putImageData(undoStack.pop(), 0, 0);
+  }
+  function clearAll() {
+    undoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+    if (undoStack.length > MAX_UNDO) undoStack.shift();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+  /* ───── 툴바 숨기기 ───── */
+  let tbHidden = false;
+  btnHide.addEventListener('click', () => {
+    tbHidden = !tbHidden;
+    if (tbHidden) {
+      toolbar.style.transform = 'translateX(-50%) translateY(80px)';
+      toolbar.style.opacity   = '0.15';
+      btnHide.textContent = '⬆';
+      btnHide.title = '툴바 보이기 (T)';
+    } else {
+      toolbar.style.transform = 'translateX(-50%)';
+      toolbar.style.opacity   = '1';
+      btnHide.textContent = '⬇';
+      btnHide.title = '툴바 숨기기 (T)';
+    }
+  });
+  toolbar.style.transition = 'transform .3s ease, opacity .3s ease';
+
+  /* ───── 키보드 단축키 ───── */
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if ((e.ctrlKey || e.metaKey) && e.key === 'z') { e.preventDefault(); undoAction(); return; }
+    switch (e.key.toLowerCase()) {
+      case 'l': setMode('laser'); break;
+      case 'p': setMode('pen');   break;
+      case 'e': setMode('erase'); break;
+      case 'escape': setMode(null); break;
+      case 'delete': case 'backspace': clearAll(); break;
+      case 't':
+        btnHide.click();
+        break;
+    }
+  });
+})();
+</script>
+</body>
+</html>
